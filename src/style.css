@@ -26,7 +26,123 @@ body, button,input,textarea {
    /* font-size: clamp(14px, 1.6rem, 2vw);*/
 }
 
+a{
+    text-decoration: none;
+}
+
+.link{
+    color: var(--light-blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 /*---------Estilos Botões------------*/
+
+
+.btn{
+    padding: 0.6rem 1.7rem;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-orange{
+    background: var(--degrade-orange);
+}
+
+.btn-orange:hover{
+    background: var(--orange);
+    box-shadow: 0 0 5px gray;
+    transition: 1s ;
+}
+
+.btn-blue{
+    background: var(--degrade-blue);
+}
+
+.btn-blue:hover{
+    background: var(--blue);
+    box-shadow: 0 0 5px gray;
+    transition: 1s;
+}
+
+.btn-outline-orange{
+    background-color: transparent;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.btn-outline-orange:hover{
+    background: var(--orange);
+    box-shadow: 0 0 5px gray;
+    color: #fff;
+    transition: 1s;
+}
+
+.btn-insert-media{
+    background-color: var(--light-orange);
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 21px;
+}
+
+.btn-insert-media:hover{
+    background: var(--orange);
+    transition: 1s;
+}
+
+/*IMAGEM DE PERFIL USUARIO*/
+
+.img-user img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/*inputs*/
+
+.input-group{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 25px auto;
+    width: 100%;
+}
+
+.input-group input[type=text],
+.input-group input[type=email],
+.input-group input[type=password]{
+    border: 2px solid #C4C4C4;
+    color: rgba(124, 120, 120, 1);
+    border-radius: 24px; 
+    padding: 10px 12px 12px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.input-group label{
+    display: none;
+    top: 29px;
+    left: 15px;
+}
+
+.input-group textarea{
+    border: 2px solid var(--light-blue);
+    border-radius: 15px;
+    padding: 10px;
+    color: rgba(124, 120, 120, 1);
+    font-size: 1.1rem;
+}
+
 
 
 /*--------Main---------*/
@@ -83,23 +199,6 @@ body, button,input,textarea {
     color:var(--light-blue);
 }
 
-.btn{
-    padding: 0.8rem;
-    border-radius: 25px;
-    width: 100%;
-    border: none;
-    margin: .4rem 0;
-    color: #fff;
-    font-size: 1.4rem;
-}
-
-.btn-orange{
-    background: var(--degrade-orange);
-}
-
-.btn-blue{
-    background: var(--degrade-blue);
-}
 
 .image-login{
     width: 100%;
