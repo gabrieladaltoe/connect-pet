@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/19831c7383.js" crossorigin="anonymous"></script>
+
     <title>Login - ConnectPet</title>
-    <link rel="stylesheet" href="./src/style.css">
-    
+    <link rel="stylesheet" href="/src/style.css">
+
 </head>
+
 <body>
     <main id="login-page">
         <section class="left-side">
@@ -19,30 +23,117 @@
 
         <section class="right-side">
             <div class="login-content">
-                <img src="./src/img/logo500.png" alt="logo ConnectPet" class="pet-logo" >
+                <img src="./src/img/logo500.png" alt="logo ConnectPet" class="pet-logo">
                 <p>Aqui o mundo é mais divertido.</p>
             </div>
 
             <div class="login-btns">
-                <button class="btn btn-orange">Entrar</button>
-                <button class="btn btn-blue">Inscrever-se</button>
+                <button class="btn btn-orange" onclick="ModalLogin.open()">Entrar</button>
+                <button class="btn btn-blue" onclick="ModalSubscribe.open()">Inscrever-se</button>
                 <a href="#">Esqueci minha senha</a>
             </div>
         </section>
     </main>
 
-    <footer  class="footer-content">
-            <div class="copyright">
-                <p>Desenvolvido por Camila, Gabriela, Marcelo e Nura.</p>
-            </div>
-            <nav class="footer-menu-nav">
-                <ul class="footer-menu">
-                    <li>Ajude</li>
-                    <li>FAQ</li>
-                    <li>Contato</li>
-                </ul>
-            </nav>
-       
+    <footer class="footer-content">
+        <div class="copyright">
+            <p>Desenvolvido por Camila, Gabriela e Marcelo.</p>
+        </div>
+        <nav class="footer-menu-nav">
+            <ul class="footer-menu">
+                <li>Ajude</li>
+                <li>FAQ</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+
     </footer>
+
+    <div id="modal-login" class="md-login">
+
+        <div class="modal-content">
+            <button class="close-modal" onclick="ModalLogin.close()">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 class="modal-title">
+                Entrar na sua conta Connect Pet
+            </h2>
+
+            <form action="" id="modal-login-form">
+
+
+                <div class="input-group">
+                    <label for="input-email">Email</label>
+                    <input type="email" name="input-email" id="input-email" placeholder="Email">
+                </div>
+
+                <div class="input-group">
+                    <label for="input-senha">Senha</label>
+                    <input type="password" name="input-senha" id="input-senha" placeholder="Senha">
+                </div>
+
+                <input type="button" value="Entrar" class="btn btn-blue">
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div class="md-subscribe" id="modal-subscribe">
+
+       <div class="modal-content">
+
+        <button class="close-modal" onclick="ModalSubscribe.close()">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2 class="modal-title">
+            Crie sua conta
+        </h2>
+
+        <form action="" id="modal-subscribe-form">
+
+            <div class="input-group">
+                <label for="input-nome">Nome</label>
+                <input type="text" name="input-nome" id="input-nome" placeholder="Nome">
+            </div>
+
+            <div class="input-group">
+                <label for="input-user">Nome de usuário</label>
+                <input type="text" name="input-user" id="input-user" placeholder="Nome de usuário">
+            </div>
+
+
+            <div class="input-group">
+                <label for="input-email">E-mail</label>
+                <input type="email" name="input-email" id="input-email" placeholder="Email">
+            </div>
+
+            <div class="input-group">
+                <label for="input-senha">Senha</label>
+                <input type="password" name="input-senha" id="input-senha" placeholder="Senha">
+            </div>
+
+            <div class="input-group">
+                <label for="input-senha-confirm">Confirmar Senha</label>
+                <input type="password" name="input-senha-confirm" id="input-senha-confirm" placeholder=" Confirmar Senha">
+            </div>
+
+            <input type="button" value="Confirmar e Enviar" class="btn btn-blue">
+
+
+        </form>
+
+
+
+       </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+
 </body>
+
 </html>
