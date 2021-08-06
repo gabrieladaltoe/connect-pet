@@ -270,7 +270,7 @@ footer{
 aside {
  background: #E2E2E2;
  width: 20%;
- height: 100vh;
+
  display: flex;
  flex-direction: column;
  justify-content: flex-start;
@@ -280,10 +280,16 @@ aside {
 
 main {
     width: 80%;
-    height: 100vh;
+    
     background: #F2F2F2;
-    padding: 5%;
 }
+
+main #main{
+    padding: 5%;
+    width: 80%;
+    height: 100vh;
+}
+
 
 
 /*ASIDE*/
@@ -486,3 +492,4 @@ aside .nav-lateral ul li a:hover{
 .lista-usuarios-item .btn-seguir{
     margin-left: auto;
 }
+

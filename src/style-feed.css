@@ -1,0 +1,145 @@
+/*section post*/
+
+.container {
+  margin: 50px;
+  padding: 20px;
+}
+
+.card-postagem {
+  width: 43rem;
+  height: 25rem;
+  background: white;
+  border-radius: 08px;
+  padding: .8rem;
+  justify-content: center;
+}
+
+.card-postagem-titulo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+#post-edit-icon {
+  margin-right: 5px;
+  color: hsla(202, 98%, 48%, 1);
+  font-size: 24px;
+}
+
+
+
+textarea {
+  width: 100%;
+  
+}
+
+.form-post-group-btn {
+  display: flex;
+  width: 100%;
+  justify-content:space-between;
+  position: relative;
+  margin-top: 10px;
+} 
+
+.form-post-group-btn .btn-post {
+  justify-self: flex-end;
+}
+
+/*section feed*/
+
+
+.card-feed{
+  margin-top: 50px;
+  position: relative;
+  
+}
+
+.card-feed-header .img-user {
+  display: flex;
+  align-items: center;
+}
+
+.card-feed--header-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 5px;
+}
+
+
+
+.card-feed--header-text a{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(61, 61, 61);
+  margin-bottom: 20px;
+}
+
+.card-feed--header-text p{
+  color: rgb(61, 61, 61);
+}
+
+.card-feed-header {
+  width: 43rem;
+  height: 47rem;
+  background: white;
+  border-radius: 08px;
+  padding: .8rem;
+  justify-content: center;
+}
+
+.img-user img {
+  width: 100px;
+  height: 100px;
+}
+
+
+.image-feed img {
+    max-width:39.35rem;
+    max-height:32.21rem;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    left: 25px;
+    margin: auto;
+    
+}
+
+.heart-feed-button{
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.feed-comentarios {
+  display: flex;
+  position: absolute;
+  bottom: 130px;
+  left: 25px;
+  width: 50%;
+  
+}
+
+.feed-comentarios i {
+  color: hsla(26, 98%, 48%, 1);
+  width: 36px;
+  height: 41px;
+  font-size: 36px;
+  
+}
+
+
+.feed-comentarios .likes {
+  font-size: 24px;
+  margin-left: 10px;
+
+}
+
+.feed-comentarios .comentarios {
+  font-size: 24px;
+  margin-left: 10px;
+}

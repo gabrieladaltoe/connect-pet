@@ -1,0 +1,60 @@
+
+input[type="text"]{
+    padding: 0.2em;
+    border: 1px solid #CCC;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+    width: 90%;
+}
+.container {
+    margin: 50px;
+    width: 60%;
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .row{
+    margin: 15px 0;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+  }
+  label {
+    /*padding: 12px 12px 12px 0;*/
+    display: inline-block;
+  }
+  textarea{
+    border: 2px solid var(--light-blue);
+    border-radius: 15px;
+    padding: 10px;
+    color: rgba(124, 120, 120, 1);
+    font-size: 1.1rem;
+    width: 90%;
+}
+
+.col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  }
+  
+  .card-body {
+    padding-right: 20px;
+    padding-top: 25px;
+}
+  
