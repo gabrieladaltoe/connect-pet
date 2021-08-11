@@ -1,28 +1,85 @@
 
-input[type="text"]{
-    padding: 0.2em;
-    border: 1px solid #CCC;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
-    width: 90%;
-}
+
 .container {
+    position: relative;
     margin: 50px;
     width: 60%;
     border-radius: 5px;
     background-color: white;
     padding: 20px;
   }
+  .img-user {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
-  .row{
-    margin: 15px 0;
+  
+  .row{  
+    margin: 25px auto;
+    width: 100%;
+  }
+  .row-linha{  
+    margin: 25px auto;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #C4C4C4;
   }
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
+  .row input[type=nome],
+       input[type=localizacao],
+       input[type=website]{
+        outline: none;
+        border: 2px solid #C4C4C4;
+        color: rgba(124, 120, 120, 1);
+        border-radius: 24px; 
+        padding: 10px 12px 12px;
+        width: 100%;
+        font-size: 1.1rem;
+        
+  }
+  input[type=nome]:focus {
+    border: 3px solid #555;
+  }
+  input[type=localizacao]:focus {
+    border: 3px solid #555;
+  }
+   input[type=website]:focus {
+    border: 3px solid #555;
+  }
+  textarea :focus{
+    border: 3px solid #555;
+  }
+  .row label{
+    top: 29px;
+    left: 15px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.9;    
+    display: inline-block;
+}
+.row textarea{
+  outline: none;
+  border: 2px solid #C4C4C4;
+  border-radius: 15px;
+  padding: 10px;
+  color: rgba(124, 120, 120, 1);
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+  .col-25-img {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+    text-align: center;
+  }
   .col-25 {
     float: left;
     width: 20%;
@@ -34,27 +91,17 @@ input[type="text"]{
     width: 80%;
     margin-top: 6px;
   }
-  label {
-    /*padding: 12px 12px 12px 0;*/
-    display: inline-block;
-  }
-  textarea{
-    border: 2px solid var(--light-blue);
-    border-radius: 15px;
-    padding: 10px;
-    color: rgba(124, 120, 120, 1);
-    font-size: 1.1rem;
-    width: 90%;
-}
-
-.col-50 {
-    float: left;
-    width: 50%;
-    margin-top: 6px;
-  }
+  
   
   .card-body {
     padding-right: 20px;
     padding-top: 25px;
-}
+  }
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, .col-25-img {
+      width: 100%;
+      margin-top: 0;
+    }
+
+
   
