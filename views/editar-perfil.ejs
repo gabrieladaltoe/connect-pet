@@ -1,46 +1,67 @@
-<%- include('../views/partials/head'); %>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/19831c7383.js" crossorigin="anonymous"></script>
+
+    <title>Login - ConnectPet</title>
+    <link href="/stylesheets/styleEditarPerfil.css" rel="stylesheet" >
+    <link href="/stylesheets/style.css" rel="stylesheet" >
+
+</head>
 <%- include('../views/partials/header'); %>
 <%- include('../views/partials/aside'); %>
+
         <main>   <!--COLOCAR UM ID DA PAGINA-->
-            <div class="container">
+            <div class="editar-perfil">
                 <form method="GET">
                     <div class="row">
-                        <div class="col-50">
+                        <div class="col-25-img">
                             <div class="img-user">
                                 <img src="./images/img3.jpg" alt="imagem-usuario">
                             </div>
                         </div>
-                        <div class="col-50">
+                        <div class="col-75">                            
                             <a href="#" class="link">Adicionar nova foto de perfil</a><br>
                             <a href="#" class="link">Remover foto de perfil</a>
-
                             <div class="card-body">
                                 <p>Arquivo em jpg ou png, com no mínimo 200px200px</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div>                
+
+                    <div class=" row">
                         <div class="col-25">
-                            <label for="nome">Nome</label>
+                            <label for="input-nome">Nome</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="nome" name="nome">
+                            <input type="nome" name="input-nome" id="input-nome" >
                         </div>
                     </div>
+
+
                     <div class="row">
                         <div class="col-25">
                             <label for="biografia">Biografia</label>
                         </div>
                         <div class="col-75">
-                            <textarea id="biografia" name="biografia" style="height:200px"></textarea>
+                            <textarea id="biografia" name="biografia" ></textarea>
                         </div>
-                    </div>
+                    </div>               
+                    
+                    
                     <div class="row">
                         <div class="col-25">
                             <label for="localizacao">Localização</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="localizacao" name="localizacao">
+                            <input type="localizacao" id="localizacao" name="localizacao">
                         </div>
                     </div>  
                     <div class="row">
@@ -48,16 +69,19 @@
                             <label for="website">WebSite</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="website" name="website">
+                            <input type="website" id="website" name="website">
                         </div>
                     </div>              
                     
                 <div class="row">
                     <button class="btn btn-blue">Salvar Alteração</button>
-                    <button class="btn btn-outline-orange">Apagar meu perfil</button>
+                    
+                </div>
+                <div class="row-linha">
+
                 </div>
                 <div class="row">
-
+                    <button class="btn btn-outline-orange">Apagar meu perfil</button>
                 </div>
                 </form>
               </div>
