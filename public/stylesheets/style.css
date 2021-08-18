@@ -379,10 +379,23 @@ aside .nav-lateral ul li a:hover{
     z-index: 99;
 }
 
-.md-login .modal-content,
+.md-login .modal-content{
+
+    width: 330px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
 .md-subscribe .modal-content{
 
-    width: 50%;
+    width: 30%;
     padding: 30px;
     background: #fff;
     border-radius: 15px;
@@ -493,3 +506,15 @@ aside .nav-lateral ul li a:hover{
     margin-left: auto;
 }
 
+
+@media screen and (max-width: 500px) {
+    .left-side{
+        display: none;
+    }
+
+    .left-side, .right-side {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+}
