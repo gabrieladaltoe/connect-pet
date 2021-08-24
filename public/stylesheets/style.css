@@ -516,5 +516,64 @@ aside .nav-lateral ul li a:hover{
         width: 100vw;
         height: 100vh;
     }
+
+    main {
+        width: 100%;
+        background: #F2F2F2;
+    }
+
+    #pag-interna .header-logo .header-logo--img {
+        height: 58px;
+        width: auto;
+        object-fit: cover;
+    }
+
+    aside{
+        position: absolute;
+        top: 121px;
+        flex-direction: row;
+        width: 100%;
+        z-index: 99;
+        left: 0;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    aside .nav-lateral ul {
+        list-style: none;
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin-top: 15px;
+    }
     
+    aside .nav-lateral ul li a {
+        color: #7C7878;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 73px;
+        margin-right: 12px;
+    }
+
+    aside .nav-lateral ul li a i {
+        color: var(--light-orange);
+        margin-right: 5px;
+        padding-top: 7px;
+    }
+
+    aside .user-img img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+    aside .nav-lateral ul li {
+        padding: 15px 0 15px;
+        border-bottom: 0;
+    }
+
 }

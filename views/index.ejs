@@ -2,12 +2,12 @@
 <body>
     <main id="login-page">
         <section class="left-side">
-            <img src="./images/img-bg-login.jpg" alt="imagem com animais" class="image-login">
+            <img src="/images/img-bg-login.jpg" alt="imagem com animais" class="image-login">
         </section>
 
         <section class="right-side">
             <div class="login-content">
-                <img src="./images/logo500.png" alt="logo ConnectPet" class="pet-logo">
+                <img src="/images/logo500.png" alt="logo ConnectPet" class="pet-logo">
                 <p class="slogan-login">Aqui o mundo é mais divertido.</p>
             </div>
 
@@ -43,21 +43,22 @@
                 Entrar na sua conta Connect Pet
             </h2>
 
-            <form action="" id="modal-login-form">
+            <form action="/admin/login" method="POST" class="modal-login-form">
 
                 <div class="input-itens">
                     <div class="input-group">
-                        <label for="input-email">Email</label>
-                        <input type="email" name="input-email" id="input-email" placeholder="Email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
                     </div>
 
                     <div class="input-group">
-                        <label for="input-senha">Senha</label>
-                        <input type="password" name="input-senha" id="input-senha" placeholder="Senha">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Senha">
                     </div>
             </div>
 
-                <input type="button" value="Entrar" class="btn btn-blue btn-modal-login">
+                <!--<input type="button" value="Entrar" class="btn btn-blue btn-modal-login">-->
+                <button type="submit" class="btn btn-blue btn-modal-login">Entrar</button>
 
 
             </form>
@@ -124,7 +125,34 @@
 
     </div>
 
-    <script src="./javascripts/script.js"></script>
+    <script>
+    
+    const modalLoginContent = document.querySelector('.md-login')
+const modalSubscribeContent = document.querySelector('.md-subscribe')
+
+const ModalLogin = {
+    
+    open() {
+        modalLoginContent.classList.add('active')
+    },
+    close() {
+        modalLoginContent.classList.remove('active')
+    }
+}
+
+
+const ModalSubscribe = {
+    
+    open() {
+        modalSubscribeContent.classList.add('active')
+    },
+    close() {
+        modalSubscribeContent.classList.remove('active')
+    }
+}
+    
+    
+    </script>
 
 </body>
 
