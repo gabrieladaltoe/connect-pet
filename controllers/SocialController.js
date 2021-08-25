@@ -8,7 +8,14 @@ const SocialController = {
 		},
 		listarUsuarios: (req, res) => {
 			res.render('listar-usuarios');
+		},
+		profileUser : (req,res) => {
+			res.render('user-profile');
+		},
+		viewUsers : (req,res) => {
+			res.render('listar-usuarios');
 		}
+		
 	}
 	module.exports = SocialController;
 

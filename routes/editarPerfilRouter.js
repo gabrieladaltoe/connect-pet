@@ -6,3 +6,5 @@ const EditarPerfilController = require('../controllers/EditarPerfilController');
 router.get('/', EditarPerfilController.editarPerfil);
 
 module.exports = router;
+
+
