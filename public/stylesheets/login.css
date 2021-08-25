@@ -1,0 +1,82 @@
+.slogan-login{
+    margin-top: 15px;
+}
+
+.modal-login .modal-content{
+    width: 330px !important;
+}
+
+.md-login h2, 
+.md-subscribe h2 {
+    text-align: center;
+}
+
+#modal-login .input-group input[type=text], 
+#modal-login .input-group input[type=email], 
+#modal-login .input-group input[type=password] {
+    font-size: 0.9rem;
+}
+
+
+#modal-subscribe-form  .input-group input[type=text], 
+#modal-subscribe-form  .input-group input[type=email], 
+#modal-subscribe-form .input-group input[type=password] {
+    font-size: 0.9rem;
+}
+
+#modal-login-form .input-group{
+        margin: 10px auto;
+}
+
+#modal-subscribe-form .input-group{
+    margin: 7px auto;
+}
+
+.input-itens{
+    margin: 15px 0 5px;
+}
+
+.btn-modal-login {
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px;
+}
+
+.btn-modal-cadastro {
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+}
+
+@media screen and (max-width: 768px){
+
+    .login-content {
+        width: min(80vw, 330px);
+        margin-left: 2.4rem;
+        margin-bottom: 3rem;
+    }
+
+    .login-content p {
+        color: var(--light-blue);
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+
+    .md-subscribe .modal-content {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .md-login .modal-content{ 
+               width: 90%;
+    }
+    
+    
+    .md-subscribe .modal-content{
+        width: 90%;
+    }    
+}
