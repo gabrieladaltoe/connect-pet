@@ -3,7 +3,7 @@ const router = express.Router();
 
 const EditarPerfilController = require('../controllers/EditarPerfilController');
 
-router.get('/editarPerfil', EditarPerfilController.editarPerfil);
+router.get('/', EditarPerfilController.editarPerfil);
 
 module.exports = router;
 
