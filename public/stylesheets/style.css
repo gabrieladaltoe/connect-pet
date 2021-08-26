@@ -291,6 +291,8 @@ aside {
 
 main {
   width: 80%;
+  display: flex;
+  justify-content: center;
 
   background: #f2f2f2;
 }

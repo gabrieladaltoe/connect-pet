@@ -1,42 +1,41 @@
 /*section bio*/
 
-.user-data{
-  display:flex;
+.user-data {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.user-bio{
+.user-bio {
   margin-left: 10px;
 }
 
-.user-bio-name{
+.user-bio-name {
   font-weight: bold;
   color: rgb(53, 53, 53);
-  margin-bottom: 5px
+  margin-bottom: 5px;
 }
-.user-bio-name span{
+.user-bio-name span {
   font-weight: 400;
 }
 
-.user-bio-text{
+.user-bio-text {
   font-size: 0.9rem;
   color: rgb(66, 66, 66);
 }
 
-
-.user-bio-location{
+.user-bio-location {
   color: gray;
   font-size: 0.8rem;
   margin-top: 15px;
 }
 
-.user-bio-location i{
+.user-bio-location i {
   margin-right: 10px;
 }
 
-.btn-seguir--user-profile{
+.btn-seguir--user-profile {
   display: flex;
   justify-content: flex-end;
   width: 60%;
@@ -54,7 +53,7 @@
   height: 25rem;
   background: white;
   border-radius: 08px;
-  padding: .8rem;
+  padding: 0.8rem;
   justify-content: center;
 }
 
@@ -72,20 +71,17 @@
   font-size: 24px;
 }
 
-
-
 textarea {
   width: 100%;
-  
 }
 
 .form-post-group-btn {
   display: flex;
   width: 100%;
-  justify-content:space-between;
+  justify-content: space-between;
   position: relative;
   margin-top: 10px;
-} 
+}
 
 .form-post-group-btn .btn-post {
   justify-self: flex-end;
@@ -93,19 +89,18 @@ textarea {
 
 /*section feed*/
 
-
-.card-feed{
+.card-feed {
   margin-top: 50px;
   position: relative;
-  
 }
 
 .card-feed-header .img-user {
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
-.card-feed--header-text{
+.card-feed--header-text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -113,16 +108,14 @@ textarea {
   margin-left: 5px;
 }
 
-
-
-.card-feed--header-text a{
+.card-feed--header-text a {
   font-size: 1.2rem;
   font-weight: bold;
   color: rgb(61, 61, 61);
   margin-bottom: 20px;
 }
 
-.card-feed--header-text p{
+.card-feed--header-text p {
   color: rgb(61, 61, 61);
 }
 
@@ -131,7 +124,7 @@ textarea {
   height: 47rem;
   background: white;
   border-radius: 08px;
-  padding: .8rem;
+  padding: 0.8rem;
   justify-content: center;
 }
 
@@ -140,20 +133,18 @@ textarea {
   height: 100px;
 }
 
-
 .image-feed img {
-    max-width:39.35rem;
-    max-height:32.21rem;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 150px;
-    left: 25px;
-    margin: auto;
-    
+  max-width: 39.35rem;
+  max-height: 32.21rem;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 150px;
+  left: 25px;
+  margin: auto;
 }
 
-.heart-feed-button{
+.heart-feed-button {
   border: 0;
   background: transparent;
   cursor: pointer;
@@ -165,7 +156,6 @@ textarea {
   bottom: 130px;
   left: 25px;
   width: 50%;
-  
 }
 
 .feed-comentarios i {
@@ -173,14 +163,11 @@ textarea {
   width: 36px;
   height: 41px;
   font-size: 36px;
-  
 }
-
 
 .feed-comentarios .likes {
   font-size: 24px;
   margin-left: 10px;
-
 }
 
 .feed-comentarios .comentarios {
