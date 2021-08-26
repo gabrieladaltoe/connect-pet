@@ -6,9 +6,6 @@ const SocialController = {
 		feed: (req, res) => {
 			res.render('feed');
 		},
-		listarUsuarios: (req, res) => {
-			res.render('listar-usuarios');
-		},
 		profileUser : (req,res) => {
 			res.render('user-profile');
 		},

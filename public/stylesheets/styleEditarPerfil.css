@@ -1,70 +1,83 @@
-
+#edit-profile{
+  display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 .editar-perfil {
-    position: relative;
-    margin: 50px;
-    width: 60%;
-    border-radius: 5px;
-    background-color: white;
-    padding: 20px;
-  }
-  .img-user {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
+  position: relative;
+  margin: 50px;
+  width: 60%;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
 }
 
-  
-  .row{  
-    margin: 25px auto;
-    width: 100%;
-  }
-  .row-linha{  
-    margin: 25px auto;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #C4C4C4;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .row input[type=nome],
-       input[type=localizacao],
-       input[type=website]{
-        outline: none;
-        border: 2px solid #C4C4C4;
-        color: rgba(124, 120, 120, 1);
-        border-radius: 24px; 
-        padding: 10px 12px 12px;
-        width: 100%;
-        font-size: 1.1rem;
-        
-  }
-  input[type=nome]:focus {
-    border: 3px solid #555;
-  }
-  input[type=localizacao]:focus {
-    border: 3px solid #555;
-  }
-   input[type=website]:focus {
-    border: 3px solid #555;
-  }
-  textarea :focus{
-    border: 3px solid #555;
-  }
-  .row label{
-    top: 29px;
-    left: 15px;
-    text-align: center;
-    cursor: pointer;
-    opacity: 0.9;    
-    display: inline-block;
+.img-user {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
 }
-.row textarea{
+
+
+.row {
+  margin: 25px auto;
+  width: 100%;
+}
+
+.row-linha {
+  margin: 25px auto;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #C4C4C4;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row input[type=nome],
+input[type=localizacao],
+input[type=website] {
+  outline: none;
+  border: 2px solid #C4C4C4;
+  color: rgba(124, 120, 120, 1);
+  border-radius: 24px;
+  padding: 10px 12px 12px;
+  width: 100%;
+  font-size: 1.1rem;
+
+}
+
+input[type=nome]:focus {
+  border: 3px solid #555;
+}
+
+input[type=localizacao]:focus {
+  border: 3px solid #555;
+}
+
+input[type=website]:focus {
+  border: 3px solid #555;
+}
+
+textarea :focus {
+  border: 3px solid #555;
+}
+
+.row label {
+  top: 29px;
+  left: 15px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.9;
+  display: inline-block;
+}
+
+.row textarea {
   outline: none;
   border: 2px solid #C4C4C4;
   border-radius: 15px;
@@ -74,35 +87,69 @@
   width: 100%;
 }
 
+.edit-photo--wrap {
+  margin: 25px auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-25-img {
+  /*float: left;*/
+  width: 20%;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.edit-photo--text-items {
+  margin-left: 0px;
+  margin: 0 0 0 26px;
+  width: 80%;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+}
+
+
+.card-body {
+  padding-right: 20px;
+  padding-top: 25px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .col-25,
+  .col-75,
   .col-25-img {
-    float: left;
-    width: 20%;
-    margin-top: 6px;
-    text-align: center;
-  }
-  .col-25 {
-    float: left;
-    width: 20%;
-    margin-top: 6px;
-  }
-  
-  .col-75 {
-    float: left;
-    width: 80%;
-    margin-top: 6px;
-  }
-  
-  
-  .card-body {
-    padding-right: 20px;
-    padding-top: 25px;
-  }
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, .col-25-img {
-      width: 100%;
-      margin-top: 0;
-    }
-
-
+    width: 100%;
+    margin-top: 0;
   }
 
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .editar-perfil {
+    position: relative;
+    margin: 143px 32px 32px;
+    width: 85%;
+    border-radius: 5px;
+    background-color: white;
+    padding: 19px;
+  }
+
+  .edit-photo--wrap {
+    align-items: start;
+  }
+}

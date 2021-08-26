@@ -6,8 +6,6 @@ var router = express.Router()
 /* GET home page. */
 router.get('/', SocialController.index)
 router.get('/feed', SocialController.feed)
-router.get('/usuarios', SocialController.listarUsuarios)
-
 router.get('/design-system', DesignSystemController.viewDesignSystem)
 router.get('/profile', SocialController.profileUser)
 router.get('/users', SocialController.viewUsers)
