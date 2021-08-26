@@ -14,6 +14,9 @@ const SocialController = {
 		},
 		viewUsers : (req,res) => {
 			res.render('listar-usuarios');
+		},
+		editProfile : (req,res) => {
+			res.render('editar-perfil');
 		}
 		
 	}

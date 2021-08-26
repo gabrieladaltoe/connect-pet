@@ -11,5 +11,7 @@ router.get('/usuarios', SocialController.listarUsuarios)
 router.get('/design-system', DesignSystemController.viewDesignSystem)
 router.get('/profile', SocialController.profileUser)
 router.get('/users', SocialController.viewUsers)
+router.get('/edit-profile', SocialController.editProfile)
+
 
 module.exports = router
