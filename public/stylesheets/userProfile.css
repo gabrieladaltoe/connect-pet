@@ -19,7 +19,7 @@
 .user-bio-name {
   font-weight: bold;
   color: rgb(53, 53, 53);
-  margin-bottom: 5px
+  margin-bottom: 5px;
 }
 
 .user-bio-name span {
@@ -30,7 +30,6 @@
   font-size: 0.9rem;
   color: rgb(66, 66, 66);
 }
-
 
 .user-bio-location {
   color: gray;
@@ -68,7 +67,7 @@
   height: 25rem;
   background: white;
   border-radius: 08px;
-  padding: .8rem;
+  padding: 0.8rem;
   justify-content: center;
 }
 
@@ -85,8 +84,6 @@
   color: hsla(202, 98%, 48%, 1);
   font-size: 24px;
 }
-
-
 
 textarea {
   width: 100%;
@@ -111,10 +108,10 @@ textarea {
 .card-feed {
   margin-top: 20px;
   position: static;
-
 }
 
 .card-feed-header .img-user {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -129,8 +126,6 @@ textarea {
   align-items: flex-start;
   margin-left: 5px;
 }
-
-
 
 .card-feed--header-text a {
   font-size: 1.2rem;
@@ -148,7 +143,7 @@ textarea {
   height: auto;
   background: transparent;
   border-radius: 08px;
-  padding: .8rem;
+  padding: 0.8rem;
   justify-content: center;
 }
 
@@ -157,7 +152,6 @@ textarea {
   height: 100px;
   margin: 25px;
 }
-
 
 .image-feed img {
   max-width: 39.35rem;
@@ -168,7 +162,6 @@ textarea {
   top: 150px;
   left: 25px;
   margin: auto;
-
 }
 
 .heart-feed-button {
@@ -186,7 +179,6 @@ textarea {
   margin: 10px 30px;
   justify-self: flex-start;
   align-self: flex-start;
-
 }
 
 .feed-comentarios i {
@@ -195,14 +187,11 @@ textarea {
   height: 41px;
   font-size: 36px;
   cursor: pointer;
-
 }
-
 
 .feed-comentarios .likes {
   font-size: 24px;
   margin-left: 10px;
-
 }
 
 .feed-comentarios .comentarios {
@@ -210,8 +199,8 @@ textarea {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 500px) {
 
+@media screen and (max-width: 500px) {
   .container-user-profile{
     width: 100vw;
   }
@@ -307,5 +296,5 @@ textarea {
 .card-feed--header-text{
   width: 50%;
 }
-
 }
+
