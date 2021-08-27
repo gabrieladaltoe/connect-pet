@@ -19,13 +19,13 @@
 }
 html {
   font-size: 65, 5%; /*a fonte padrão de 16px vira 10px*/
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
 }
 body,
 button,
 input,
 textarea {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
   /* font-size: clamp(14px, 1.6rem, 2vw);*/
 }
 
@@ -511,7 +511,7 @@ aside .nav-lateral ul li a:hover {
   }
 
   #pag-interna .header-logo .header-logo--img {
-    height: 58px;
+    height: 51px;
     width: auto;
     object-fit: cover;
   }

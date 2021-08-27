@@ -1,4 +1,9 @@
 /*section bio*/
+#user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
 .user-data {
   display: flex;
@@ -16,6 +21,7 @@
   color: rgb(53, 53, 53);
   margin-bottom: 5px;
 }
+
 .user-bio-name span {
   font-weight: 400;
 }
@@ -38,7 +44,6 @@
 .btn-seguir--user-profile {
   display: flex;
   justify-content: flex-end;
-  width: 60%;
 }
 
 /*section post*/
@@ -46,6 +51,15 @@
 .container {
   margin: 50px;
   padding: 20px;
+}
+
+.card-feed {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-postagem {
@@ -73,6 +87,7 @@
 
 textarea {
   width: 100%;
+
 }
 
 .form-post-group-btn {
@@ -89,15 +104,19 @@ textarea {
 
 /*section feed*/
 
+
 .card-feed {
-  margin-top: 50px;
-  position: relative;
+  margin-top: 20px;
+  position: static;
 }
 
 .card-feed-header .img-user {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
 }
 
 .card-feed--header-text {
@@ -121,8 +140,8 @@ textarea {
 
 .card-feed-header {
   width: 43rem;
-  height: 47rem;
-  background: white;
+  height: auto;
+  background: transparent;
   border-radius: 08px;
   padding: 0.8rem;
   justify-content: center;
@@ -131,6 +150,7 @@ textarea {
 .img-user img {
   width: 100px;
   height: 100px;
+  margin: 25px;
 }
 
 .image-feed img {
@@ -138,7 +158,7 @@ textarea {
   max-height: 32.21rem;
   width: auto;
   height: auto;
-  position: absolute;
+  position: static;
   top: 150px;
   left: 25px;
   margin: auto;
@@ -152,10 +172,13 @@ textarea {
 
 .feed-comentarios {
   display: flex;
-  position: absolute;
-  bottom: 130px;
-  left: 25px;
-  width: 50%;
+  position: static;
+  /* bottom: 130px; */
+  /* left: 25px; */
+  width: 100%;
+  margin: 10px 30px;
+  justify-self: flex-start;
+  align-self: flex-start;
 }
 
 .feed-comentarios i {
@@ -163,6 +186,7 @@ textarea {
   width: 36px;
   height: 41px;
   font-size: 36px;
+  cursor: pointer;
 }
 
 .feed-comentarios .likes {
@@ -174,3 +198,103 @@ textarea {
   font-size: 24px;
   margin-left: 10px;
 }
+
+
+@media screen and (max-width: 500px) {
+  .container-user-profile{
+    width: 100vw;
+  }
+  .user-data {
+    margin-top: 100px;
+    margin-bottom: 0;
+    width: 100vw;
+    padding: 0 10px;
+  }
+
+  .img-user img {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+    object-fit: cover;
+}
+
+  .btn-seguir--user-profile {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.card-feed {
+  margin-top: 20px;
+  position: static;
+  width: 100vw;
+}
+
+.card-feed-header {
+  width: 43rem;
+  height: auto;
+  background: transparent;
+  border-radius: 08px;
+  padding: .8rem;
+  justify-content: center;
+  width: 100vw;
+}
+
+.card-feed-header .img-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100vw;
+  position: static;
+}
+
+.image-feed img {
+  /* max-width: 39.35rem; */
+  /* max-height: 32.21rem; */
+  width: auto;
+  height: auto;
+  position: static;
+  /* top: 150px; */
+  /* left: 25px; */
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.feed-comentarios {
+  display: flex;
+  position: static;
+  /* bottom: 130px; */
+  /* left: 25px; */
+  width: 100vw;
+  margin: 0;
+  justify-self: flex-start;
+  align-self: flex-start;
+  padding: 1px 15px;
+}
+
+.heart-feed-button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.feed-comentarios .likes {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.feed-comentarios .comentarios {
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.card-feed--header-text{
+  width: 50%;
+}
+}
+
