@@ -143,6 +143,7 @@ a {
   padding: 10px;
   color: rgba(124, 120, 120, 1);
   font-size: 1.1rem;
+  outline: none;
 }
 
 /*--------Main---------*/
