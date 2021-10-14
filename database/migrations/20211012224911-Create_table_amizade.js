@@ -3,11 +3,11 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.createTable(
-      'amizade',
+      'amizades',
       {
         id: { type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
         data: { type: Sequelize.DataTypes.DATE, allowNull: false },
-        usuario_P_id: {
+        usuarios_P_id: {
           type: Sequelize.DataTypes.INTEGER,
           references: {
             model: {
@@ -16,7 +16,7 @@ module.exports = {
             key: 'id'
           }
         },
-        usuario_S_id: {
+        usuarios_S_id: {
           type: Sequelize.DataTypes.INTEGER,
           references: {
             model: {
@@ -30,6 +30,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('amizade')
+    return queryInterface.dropTable('amizades')
   }
 };
