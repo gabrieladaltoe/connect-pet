@@ -7,7 +7,7 @@ module.exports = {
       {
         id: { type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
         data: { type: Sequelize.DataTypes.DATE, allowNull: false },
-        usuario_id: {
+        usuarios_id: {
           type: Sequelize.DataTypes.INTEGER,
           references: {
             model: {
@@ -16,7 +16,7 @@ module.exports = {
             key: 'id'
           }
         },
-        publicacao_id: {
+        publicacoes_id: {
           type: Sequelize.DataTypes.INTEGER,
           references: {
             model: {
