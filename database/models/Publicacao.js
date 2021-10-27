@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
 )
 p.associate = (models)=> {
     p.hasMany(models.Comentario, {as:'comentarios', foreignKey:'publicacoes_id'});
-    p.belongsTo(models.Usuario, {as:'publicacao', foreignKey:'usuarios_id'});
+    p.belongsTo(models.Usuario, {as:'usuarios', foreignKey:'usuarios_id'});
+    p.hasMany(models.Curtida, {as:'curtidas', foreignKey:'publicacoes_id'});
 }
 // testando git
 
