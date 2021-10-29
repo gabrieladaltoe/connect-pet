@@ -16,7 +16,6 @@ module.exports = {
             senha
         } = req.body;
 
-
         // buscar no array de usuarios um usuario que tenha email igual
         //verifico se a senha é igual a do usuario cadastrado
 
@@ -29,6 +28,30 @@ module.exports = {
             }
         }
 
-        return res.redirect('/admin/login?err=1'); //
-    }
+        return res.redirect('/admin'); //
+    },
+    registrar: async(req, res) =>
+    {
+        console.log("entrou aki");
+        const {nome, nome_usuario, email, senha, senhaconfirm} = req.body;
+        if(senha !== senhaconfirm)
+        {
+            return alert("Senha nao confere.");
+        }
+        try
+        {
+        let resultado = await Usuario.create({nome:nome, 
+                                                  nome_usuario: nome_usuario,
+                                                  email: email,
+                                                  senha:bcrypt.hashSync(senha, 10)
+                                                });
+            return console.log(resultado);
+
+        }
+        catch(error)
+        {
+            console.log("erro ao cadastrar usuário");
+        }
+   
+    }         
 }

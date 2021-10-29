@@ -11,7 +11,6 @@ const ModalLogin = {
     }
 }
 
-
 const ModalSubscribe = {
     
     open() {
