@@ -8,6 +8,6 @@ console.log(bcrypt.hashSync('123456', 10))
 const AuthController = require('../controllers/AuthController')
 
 router.get('/', AuthController.showLogin);
-router.post('/', AuthController.login);
+router.post('/login', AuthController.login);
 router.post('/registrar', AuthController.registrar);
 module.exports = router;

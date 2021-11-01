@@ -8,14 +8,15 @@ module.exports = {
 	},
 	registrarPerfil:async(req,res) =>{
 		const {nome, biografia, localizacao, website, img_user} = req.body;
-		
+		const usuarios_id;
 		try
         {
             let resultado = await Perfil.create({nome:nome, 
 				                                 biografia:biografia, 
 												 localizacao:localizacao, 
 												 website:website, 
-												 img_user:img_user});
+												 img_user:img_user,
+											    usuarios_id: usuarios_id});
             return res.status(201).json(resultado);
         }
         catch(error){

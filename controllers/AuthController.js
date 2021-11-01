@@ -12,20 +12,14 @@ module.exports = {
     login: async (req, res) => {
         const {email, senha } = req.body;
         const usuario = await Usuario.findOne({where:{email}});
-        console.log("entrou aki login");
-        if (!usuario) {
-            return res.redirect("/admin");
-            //return res.status(403).json({erro:1, msg: "Acesso negado"})
-        }
-        if(senha != usuario.senha)
-        {
-            return res.redirect("/admin");
-        }
-        /* comentado pois no banco esta sem criptografia
-        if(!bcrypt.compareSync(senha, usuario.senha)){
-           //return res.status(403).json({erro:1, msg:"Acesso negado"});
-           return res.redirect("/admin");
+      /*  if (!usuario) {
+            alert("Email Invalido");
+            return res.redirect("/login");
         }*/
+      
+        if(!bcrypt.compareSync(senha, usuario.senha) || !usuario){
+           return res.redirect("/");
+        }
 
         // gerar o token
        usuario.senha = undefined;
@@ -47,7 +41,7 @@ module.exports = {
                                                   email: email,
                                                   senha:bcrypt.hashSync(senha, 10)
                                                 });
-            return console.log(resultado);
+                                                return res.redirect("/feed");
 
         }
         catch(error)
