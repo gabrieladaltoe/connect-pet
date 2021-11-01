@@ -1,9 +1,9 @@
-// const pizzas = require('../database/Pizzas.json');
+const {Publicacao} = require('../database/models');
 const SocialController = {
 		index: (req, res) => {
 			res.render('index');
 		},
-		feed: (req, res) => {
+		feed: async (req, res) => {
 			res.render('feed');
 		},
 		profileUser : (req,res) => {
