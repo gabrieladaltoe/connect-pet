@@ -1,14 +1,9 @@
-var express = require('express');
-var router = express.Router();
-
-const bcrypt = require('bcrypt');
-
-console.log(bcrypt.hashSync('123456', 10))
+const express = require('express');
+const router = express.Router();
 
 const AuthController = require('../controllers/AuthController')
 
 router.get('/', AuthController.showLogin);
-router.post('/', AuthController.login);
-router.post('/registrar', AuthController.registrar);
+router.post('/login', AuthController.login);
 
 module.exports = router;
