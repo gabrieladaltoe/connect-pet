@@ -11,6 +11,7 @@ module.exports = {
     },
     login: async (req, res) => {
         const {email, senha } = req.body;
+
         const usuario = await Usuario.findOne({where:{email}});
       /*  if (!usuario) {
             alert("Email Invalido");
@@ -22,8 +23,9 @@ module.exports = {
         }
 
         // gerar o token
-       usuario.senha = undefined;
+        usuario.senha = undefined;
         let token = jwt.sign(usuario.toJSON(), "connectpet");   
+        req.session.usuario = JSON.stringify(usuario.id)
         return res.redirect("/feed");
     },
     registrar: async(req, res) =>
@@ -48,5 +50,10 @@ module.exports = {
         {
             console.log("erro ao cadastrar usuário" + console.error());
         }
+    }, 
+    logout: (req,res) =>
+    {
+        req.session.destroy();
+        res.redirect("/");
     }
 }
