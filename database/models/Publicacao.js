@@ -21,5 +21,3 @@ p.associate = (models)=> {
 
 return p;
 }
-
-//teste3
