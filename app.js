@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/indexRouter');
@@ -9,14 +10,6 @@ const usersRouter = require('./routes/users');
 const editarPerfilRouter = require('./routes/editarPerfilRouter');
 const authRouter = require('./routes/authRouter');
 const cadRouter = require('./routes/cadRouter');
-
-//const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
-const logger = require('morgan');
-
 
 const app = express();
 
