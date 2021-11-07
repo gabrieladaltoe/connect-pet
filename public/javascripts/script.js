@@ -27,9 +27,9 @@ const ModalSubscribe = {
 }
 
 enviar.addEventListener('click', function(event){
-    if(senha !== senha_confirm){
+    if(senha.value !== senha_confirm.value){
         console.log('senha não confere');
         alert('senha não confere');
+        event.preventDefault();
     }
-    event.preventDefault();
 })
