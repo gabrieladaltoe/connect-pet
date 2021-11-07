@@ -25,5 +25,10 @@ module.exports = {
         usuario.senha = undefined;
         let token = jwt.sign(usuario.toJSON(), "connectpet");   
         return res.redirect("/feed");
+    },
+    logout: (req,res) =>
+    {
+        req.session.destroy();
+        res.redirect("/");
     }
 }
