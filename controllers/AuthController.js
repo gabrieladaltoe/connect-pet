@@ -17,14 +17,17 @@ module.exports = {
             return res.redirect("/login");
         }*/
       
-        if(!bcrypt.compareSync(senha, usuario.senha) || !usuario){
-           return res.redirect("/");
+        if (!bcrypt.compareSync(senha, usuario.senha) || !usuario) {
+
+            return res.redirect("/");
+
         }
 
         // gerar o token
        usuario.senha = undefined;
         let token = jwt.sign(usuario.toJSON(), "connectpet");   
-        return res.redirect("/feed");
+        console.log(Usuario)
+        return res.redirect("/feed",);
     },
     registrar: async(req, res) =>
     {
