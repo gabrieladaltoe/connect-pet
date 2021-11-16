@@ -7,13 +7,13 @@ const SocialController = {
 			res.render('feed');
 		},
 		profileUser : (req,res) => {
-			res.render('user-profile');
+			res.render('perfil');
 		},
 		viewUsers : (req,res) => {
 			res.render('listar-usuarios');
 		},
-		editProfile : (req,res) => {
-			res.render('editar-perfil');
+		quemSomos : (req,res) => {
+			res.render('contato');
 		}
 		
 	}

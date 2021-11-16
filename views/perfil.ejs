@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/19831c7383.js" crossorigin="anonymous"></script>
-
-    <title>Login - ConnectPet</title>
-    <link href="/stylesheets/styleEditarPerfil.css" rel="stylesheet" >
-    <link href="/stylesheets/style.css" rel="stylesheet" >
-
-</head>
+<%- include('../views/partials/head'); %>
 <%- include('../views/partials/header'); %>
 <%- include('../views/partials/aside'); %>
 
         <main id="edit-profile">   <!--COLOCAR UM ID DA PAGINA-->
             <div class="editar-perfil">
-                <form method="GET">
+                <form action="/registrarPerfil" method="POST">
                     <div class="edit-photo--wrap">
                         <div class="col-25-img">
                             <div class="img-user">
@@ -41,7 +25,7 @@
                             <label for="input-nome">Nome</label>
                         </div>
                         <div class="col-75">
-                            <input type="nome" name="input-nome" id="input-nome" >
+                            <input type="nome" name="input-nome" id="input-nome" disabled >
                         </div>
                     </div>
 
@@ -51,7 +35,7 @@
                             <label for="biografia">Biografia</label>
                         </div>
                         <div class="col-75">
-                            <textarea id="biografia" name="biografia" ></textarea>
+                            <textarea id="biografia" name="biografia" disabled></textarea>
                         </div>
                     </div>               
                     
@@ -61,7 +45,7 @@
                             <label for="localizacao">Localização</label>
                         </div>
                         <div class="col-75">
-                            <input type="localizacao" id="localizacao" name="localizacao">
+                            <input type="localizacao" id="localizacao" name="localizacao" disabled>
                         </div>
                     </div>  
                     <div class="row">
@@ -69,24 +53,38 @@
                             <label for="website">WebSite</label>
                         </div>
                         <div class="col-75">
-                            <input type="website" id="website" name="website">
+                            <input type="website" id="website" name="website" disabled>
                         </div>
                     </div>              
                     
-                <div class="row">
-                    <button class="btn btn-blue">Salvar Alteração</button>
+                    <div class="btn_profile">
+                        <button class="btn btn-blue">Salvar</button>
+                        <button type="button" class="btn btn-outline-orange" id="btnAlterar" onclick="alterar()">Alterar</button>
+                        <button class="btn btn-outline-orange">Apagar</button>
+                    </div>
                     
-                </div>
-                <div class="row-linha">
-
-                </div>
-                <div class="row">
-                    <button class="btn btn-outline-orange">Apagar meu perfil</button>
-                </div>
                 </form>
               </div>
         </main>
 
     </div>
+
+    <script>
+        // habilita os campos para editar o perfil
+        function alterar(){
+            
+            let input_nome = document.getElementById('input-nome')
+            let localizacao = document.getElementById('localizacao')
+            let biografia = document.getElementById('biografia')
+            let website = document.getElementById('website')
+
+            input_nome.disabled = false
+            localizacao.disabled = false
+            biografia.disabled = false
+            website.disabled = false
+            
+        }
+    </script>
 </body>
+
 </html>

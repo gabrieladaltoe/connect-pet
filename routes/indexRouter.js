@@ -7,9 +7,9 @@ var router = express.Router()
 router.get('/', SocialController.index)
 router.get('/feed', SocialController.feed)
 router.get('/design-system', DesignSystemController.viewDesignSystem)
-router.get('/profile', SocialController.profileUser)
+router.get('/perfil', SocialController.profileUser)
 router.get('/users', SocialController.viewUsers)
-router.get('/edit-profile', SocialController.editProfile)
+router.get('/contato', SocialController.quemSomos)
 
 
 module.exports = router
