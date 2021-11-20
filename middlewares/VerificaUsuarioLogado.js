@@ -1,7 +1,9 @@
-module.exports = (req, res, next) => {
-    if(req.session.user){
-        next();
+function auth(req, res, next) {
+    if(typeof(req.session.usuario) != "underfined"){
+        return next();
     } else {
-        res.redirect("/login");
+        return res.send("não esta logado")
     }
 }
+
+module.exports = auth
