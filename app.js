@@ -10,6 +10,7 @@ const usersRouter = require('./routes/users');
 const authRouter = require('./routes/authRouter');
 const cadRouter = require('./routes/cadRouter');
 const perfilRouter = require('./routes/perfilRouter');
+const feedRouter = require('./routes/feedRouter');
 
 const app = express();
 
@@ -20,7 +21,11 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(session({secret:"CONNECTPET"}));
+app.use(session({
+  secret:"CONNECTPET",
+  resave: true,
+  saveUninitialized: true,
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -28,8 +33,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.use('/', authRouter);
-app.use('/', cadRouter);
+app.use('/', feedRouter);
 app.use('/', perfilRouter);
+app.use('/', cadRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

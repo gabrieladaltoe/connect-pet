@@ -10,7 +10,7 @@ const SocialController = {
 			res.render('user-profile');
 		},
 		viewUsers : (req,res) => {
-			res.render('listar-usuarios');
+			res.render('mostarusuarios');
 		},
 		quemSomos : (req,res) => {
 			res.render('contato');

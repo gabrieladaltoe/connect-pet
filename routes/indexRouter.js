@@ -13,6 +13,7 @@ router.post('/perfil', Perfil.registrarPerfil);
 router.get('/user-profile', SocialController.profile)
 router.get('/users', SocialController.viewUsers)
 router.get('/contato', SocialController.quemSomos)
+router.get('/usuarios', SocialController.viewUsers)
 
 
 module.exports = router
