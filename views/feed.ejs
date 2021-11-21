@@ -37,44 +37,39 @@
 
                     </section>
 
-                    
                     <% JSON.stringify(public) %>
-                    <% for(let publicacao of public){ %>
-                    <section class="card-feed">
-                        <div class="header-feed card-feed-header">
-                            <div class="img-user" id="user-text">
-                                <img src="<%= publicacao.img_pub %>" alt="imagem-usuario">
-                                <div class="card-feed--header-text">
-                                    <a class="user-name-card">nome usuario</a>
-                                    <p class="text-feed">
-                                        <%= publicacao.texto %>
-                                    </p>
+                        <% for(let publicacao of public){ %>
+                            <section class="card-feed">
+                                <div class="header-feed card-feed-header">
+                                    <div class="img-user" id="user-text">
+                                        <img src="<%= publicacao.img_pub %>" alt="imagem-usuario">
+                                        <div class="card-feed--header-text">
+                                            <a class="user-name-card">nome usuario</a>
+                                            <p class="text-feed">
+                                                <%= publicacao.texto %>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="image-feed">
-                            <img id="imgId" src="<%= publicacao.img_pub %>" alt="image-feed">
-                        </div>
-                    
-                        <div class="feed-comentarios">
-                            <button class="heart-feed-button">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                    
-                            <p class="likes">50 Likes</p>
-                            <a class="comentarios">3 Comentários</a>
-                        </div>
-                        
-                    </section>
-                    <% } %>
+                                <div class="image-feed">
+                                    <img id="imgId" src="<%= publicacao.img_pub %>" alt="image-feed">
+                                </div>
 
+                                <div class="feed-comentarios">
+                                    <button class="heart-feed-button">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+
+                                    <p class="likes">50 Likes</p>
+                                    <a class="comentarios">3 Comentários</a>
+                                </div>
+
+                            </section>
+                            <% } %>
 
                 </div>
             </main>
 
+    </body>
 
-
-
-            </body>
-
-            </html>
+</html>

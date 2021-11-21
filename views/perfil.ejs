@@ -4,7 +4,7 @@
 <main id="edit-profile">   <!--COLOCAR UM ID DA PAGINA-->
     
             <div class="editar-perfil">
-                <form action="/registrarPerfil" method="POST">
+                <form action="/editar?_method=PUT" method="POST">
                     <div class="edit-photo--wrap">
                         <div class="col-25-img">
                             <div class="img-user" title="Arquivo em jpg ou png, com no mínimo 150px150px">
@@ -43,11 +43,11 @@
                         <button type="reset" class="btn btn-outline-orange">Limpar</button>
                     </div>
                     
-                    <!-- <p><%= my_perfil.nome %></p>
+                    <p><%= my_perfil.nome %></p>
                     <p><%= my_perfil.biografia %></p>
                     <p><%= my_perfil.localizacao %></p>
                     <p><%= my_perfil.website %></p>
-                    <p><%= my_perfil.usuarios_id %></p> -->
+                    <p><%= my_perfil.usuarios_id %></p>
                     
                 </form>
               </div>
