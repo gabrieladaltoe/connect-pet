@@ -9,7 +9,7 @@
                     <section class="card-postagem">
                         <div class="title card-postagem-titulo">
                             <i id="post-edit-icon" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            <p class="text">O que {nome do seu pet} está fazendo ?</p>
+                            <p class="text">O que <%= usuario.nome_usuario %> está fazendo ?</p>
                         </div>
                         <form class="formulario-postagem">
                             <div class="input-group">
@@ -37,32 +37,36 @@
 
                     </section>
 
+                    
+                    <% JSON.stringify(public) %>
+                    <% for(let publicacao of public){ %>
                     <section class="card-feed">
                         <div class="header-feed card-feed-header">
                             <div class="img-user" id="user-text">
-                                <img src="./images/img3.jpg" alt="imagem-usuario">
+                                <img src="<%= publicacao.img_pub %>" alt="imagem-usuario">
                                 <div class="card-feed--header-text">
-                                    <a class="user-name-card">@numeUsuario</a>
-                                    <p class="text-feed">Olhem que linda está Lulu brincando no parquinho!</p>
+                                    <a class="user-name-card">nome usuario</a>
+                                    <p class="text-feed">
+                                        <%= publicacao.texto %>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="image-feed">
-                            <img id="feed-image" src="./images/img2.jpg" alt="image-feed">
+                            <img id="imgId" src="<%= publicacao.img_pub %>" alt="image-feed">
                         </div>
-
+                    
                         <div class="feed-comentarios">
                             <button class="heart-feed-button">
                                 <i class="fas fa-heart"></i>
                             </button>
-
+                    
                             <p class="likes">50 Likes</p>
                             <a class="comentarios">3 Comentários</a>
-
                         </div>
-
-
+                        
                     </section>
+                    <% } %>
 
 
                 </div>

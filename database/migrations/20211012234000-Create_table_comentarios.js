@@ -7,6 +7,7 @@ module.exports = {
       {
         id: { type: Sequelize.DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
         comentario: { type: Sequelize.DataTypes.TEXT, allowNull: false },
+        data: { type: Sequelize.DataTypes.DATE, allowNull: false },
         publicacoes_id: {
           type: Sequelize.DataTypes.INTEGER,
           references: {
