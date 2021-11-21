@@ -3,9 +3,6 @@ const SocialController = {
 		index: (req, res) => {
 			res.render('index');
 		},
-		feed: async (req, res) => {
-			res.render('feed');
-		},
 		profile : (req,res) => {
 			res.render('user-profile');
 		},

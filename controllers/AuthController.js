@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports = {
     showLogin: (req, res) => {
-        res.redirect('/login', {
+        res.redirect('/', {
             error: null
         });
     },
@@ -19,8 +19,8 @@ module.exports = {
         // gerar o token
         usuario.senha = undefined;
         let token = jwt.sign(usuario.toJSON(),"connectpet");
-        req.session.usuario = JSON.stringify(usuario.id);
-        
+
+        req.session.usuario = usuario.toJSON()
         return res.redirect("/feed");
     },
     logout: (req,res) =>

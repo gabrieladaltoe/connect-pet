@@ -11,13 +11,11 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "publicacoes",
             timestamps: false
         }
-)
-p.associate = (models)=> {
-    p.hasMany(models.Comentario, {as:'comentarios', foreignKey:'publicacoes_id'});
-    p.belongsTo(models.Usuario, {as:'usuarios', foreignKey:'usuarios_id'});
-    p.hasMany(models.Curtida, {as:'curtidas', foreignKey:'publicacoes_id'});
-}
-// testando git
-
-return p;
+    )
+    p.associate = (models)=> {
+        p.hasMany(models.Comentario, {as:'comentarios', foreignKey:'publicacoes_id'});
+        p.belongsTo(models.Usuario, {as:'usuarios', foreignKey:'usuarios_id'});
+        p.hasMany(models.Curtida, {as:'curtidas', foreignKey:'publicacoes_id'});
+    }
+    return p;
 }
