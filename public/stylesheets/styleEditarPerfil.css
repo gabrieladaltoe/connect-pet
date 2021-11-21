@@ -14,10 +14,11 @@
 }
 
 .img-user {
-  width: 150px;
+  /* width: 150px;
   height: 150px;
-  object-fit: cover;
+  object-fit: cover; */
   border-radius: 50%;
+  width: 50%;
 }
 
 
@@ -88,8 +89,8 @@ textarea :focus {
 }
 
 .edit-photo--wrap {
-  margin: 25px auto;
-  width: 100%;
+  /* margin: 25px auto; */
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,34 +100,44 @@ textarea :focus {
   /*float: left;*/
   width: 20%;
   margin-top: 6px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .edit-photo--text-items {
-  margin-left: 0px;
-  margin: 0 0 0 26px;
-  width: 80%;
+  /* margin-left: 0px;
+  margin: 0 0 0 26px; */
+  width: 50%;
+}
+
+textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* 
+section, .row{
+  margin: 15px;
 }
 
 .col-25 {
   float: left;
-  width: 20%;
+  
   margin-top: 6px;
 }
 
 .col-75 {
   float: left;
   width: 80%;
-  margin-top: 6px;
+  margin-top: 6px; 
 }
-
+*/
 
 .card-body {
   padding-right: 20px;
   padding-top: 25px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
   .col-25,
   .col-75,
@@ -139,7 +150,7 @@ textarea :focus {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .editar-perfil {
     position: relative;
     margin: 143px 32px 32px;
@@ -149,7 +160,7 @@ textarea :focus {
     padding: 19px;
   }
 
-  .edit-photo--wrap {
+  /* .edit-photo--wrap {
     align-items: start;
-  }
+  } */
 }

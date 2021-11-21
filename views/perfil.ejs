@@ -1,67 +1,53 @@
 <%- include('../views/partials/head'); %>
 <%- include('../views/partials/header'); %>
 <%- include('../views/partials/aside'); %>
-
-        <main id="edit-profile">   <!--COLOCAR UM ID DA PAGINA-->
+<main id="edit-profile">   <!--COLOCAR UM ID DA PAGINA-->
+    
             <div class="editar-perfil">
                 <form action="/registrarPerfil" method="POST">
                     <div class="edit-photo--wrap">
                         <div class="col-25-img">
-                            <div class="img-user">
+                            <div class="img-user" title="Arquivo em jpg ou png, com no mínimo 150px150px">
                                 <img src="./images/img3.jpg" alt="imagem-usuario">
                             </div>
                         </div>
                         <div class="edit-photo--text-items">                            
-                            <a href="#" class="link">Adicionar nova foto de perfil</a><br>
+                            <a href="#" class="link" >Adicionar nova foto de perfil</a><br>
                             <a href="#" class="link">Remover foto de perfil</a>
-                            <div class="card-body">
-                                <p>Arquivo em jpg ou png, com no mínimo 200px200px</p>
-                            </div>
                         </div>
                     </div>                
 
-                    <div class=" row">
-                        <div class="col-25">
-                            <label for="input-nome">Nome</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="nome" name="input-nome" id="input-nome" disabled >
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="biografia">Biografia</label>
-                        </div>
-                        <div class="col-75">
-                            <textarea id="biografia" name="biografia" disabled></textarea>
-                        </div>
-                    </div>               
+                    <section class="row">
+                        <label for="input_nome">Nome</label>
+                        <input type="nome" name="input_nome" id="input_nome" disabled title="Nome do Pet" <%= my_perfil.nome %> >
+                    </section>
                     
+                    <section class="row">
+                        <label for="biografia">Biografia</label>
+                        <textarea id="biografia" name="biografia" disabled title="Biografia" <%= my_perfil.biografia %>></textarea>
+                    </section>               
                     
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="localizacao">Localização</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="localizacao" id="localizacao" name="localizacao" disabled>
-                        </div>
-                    </div>  
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="website">WebSite</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="website" id="website" name="website" disabled>
-                        </div>
-                    </div>              
+                    <section class="row">
+                        <label for="localizacao">Localização</label>
+                        <input type="localizacao" id="localizacao" name="localizacao" disabled title="Localização" <%= my_perfil.localizacao %>>
+                    </section>  
+
+                    <section class="row">
+                        <label for="website">WebSite</label>
+                        <input type="website" id="website" name="website" disabled title="Website" <%= my_perfil.website %>>
+                    </section>    
                     
                     <div class="btn_profile">
-                        <button class="btn btn-blue">Salvar</button>
+                        <button type="submit" class="btn btn-blue">Salvar</button>
                         <button type="button" class="btn btn-outline-orange" id="btnAlterar" onclick="alterar()">Alterar</button>
-                        <button class="btn btn-outline-orange">Apagar</button>
+                        <button type="reset" class="btn btn-outline-orange">Limpar</button>
                     </div>
+                    
+                    <!-- <p><%= my_perfil.nome %></p>
+                    <p><%= my_perfil.biografia %></p>
+                    <p><%= my_perfil.localizacao %></p>
+                    <p><%= my_perfil.website %></p>
+                    <p><%= my_perfil.usuarios_id %></p> -->
                     
                 </form>
               </div>
@@ -73,7 +59,7 @@
         // habilita os campos para editar o perfil
         function alterar(){
             
-            let input_nome = document.getElementById('input-nome')
+            let input_nome = document.getElementById('input_nome')
             let localizacao = document.getElementById('localizacao')
             let biografia = document.getElementById('biografia')
             let website = document.getElementById('website')
@@ -82,8 +68,9 @@
             localizacao.disabled = false
             biografia.disabled = false
             website.disabled = false
-            
+
         }
+        
     </script>
 </body>
 
