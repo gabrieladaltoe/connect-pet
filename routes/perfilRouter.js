@@ -3,8 +3,8 @@ const router = express.Router();
 const VerificaUsuarioLogado = require('../middlewares/VerificaUsuarioLogado');
 const PerfilController = require('../controllers/PerfilController');
 
-router.get('/perfil', VerificaUsuarioLogado, PerfilController.perfil);
-router.post('/registrarPerfil', VerificaUsuarioLogado, PerfilController.registrarPerfil);
+router.get('/perfil', PerfilController.perfil);
+router.post('/registrarPerfil', PerfilController.registrarPerfil);
 
 module.exports = router;
 

@@ -12,8 +12,7 @@ module.exports = {
                                                   email: email_cad,
                                                   senha:bcrypt.hashSync(senha_cad, 10)
             });
-            console.log(resultado);
-            return res.redirect('/feed');
+            return res.status(201).redirect('/feed');
         }
         catch(error)
         {

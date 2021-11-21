@@ -1,4 +1,4 @@
-const {Publicacao} = require('../database/models');
+//const {Publicacao} = require('../database/models');
 const SocialController = {
 		index: (req, res) => {
 			res.render('index');
@@ -6,8 +6,8 @@ const SocialController = {
 		feed: async (req, res) => {
 			res.render('feed');
 		},
-		profileUser : (req,res) => {
-			res.render('perfil');
+		profile : (req,res) => {
+			res.render('user-profile');
 		},
 		viewUsers : (req,res) => {
 			res.render('listar-usuarios');
