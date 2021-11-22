@@ -25,7 +25,8 @@ module.exports = {
 												 website:website, 
 												 img_user:img_user,
 												 usuarios_id:req.session.usuario});
-												 
+
+												 												 
             return res.redirect("/feed");
         }
         catch(error){
