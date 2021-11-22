@@ -19,22 +19,22 @@
 
                     <section class="row">
                         <label for="input_nome">Nome</label>
-                        <input type="nome" name="input_nome" id="input_nome" disabled title="Nome do Pet" <%= my_perfil.nome %> >
+                        <input type="nome" name="input_nome" id="input_nome" disabled title="Nome do Pet" value='<%= my_perfil.nome %>' >
                     </section>
                     
                     <section class="row">
                         <label for="biografia">Biografia</label>
-                        <textarea id="biografia" name="biografia" disabled title="Biografia" <%= my_perfil.biografia %>></textarea>
+                        <textarea id="biografia" name="biografia" disabled title="Biografia" ><%= my_perfil.biografia %></textarea>
                     </section>               
                     
                     <section class="row">
                         <label for="localizacao">Localização</label>
-                        <input type="localizacao" id="localizacao" name="localizacao" disabled title="Localização" <%= my_perfil.localizacao %>>
+                        <input type="localizacao" id="localizacao" name="localizacao" disabled title="Localização" value='<%= my_perfil.localizacao %>'>
                     </section>  
 
                     <section class="row">
                         <label for="website">WebSite</label>
-                        <input type="website" id="website" name="website" disabled title="Website" <%= my_perfil.website %>>
+                        <input type="website" id="website" name="website" disabled title="Website" value='<%= my_perfil.website %>'>
                     </section>    
                     
                     <div class="btn_profile">
@@ -42,12 +42,6 @@
                         <button type="button" class="btn btn-outline-orange" id="btnAlterar" onclick="alterar()">Alterar</button>
                         <button type="reset" class="btn btn-outline-orange">Limpar</button>
                     </div>
-                    
-                    <p><%= my_perfil.nome %></p>
-                    <p><%= my_perfil.biografia %></p>
-                    <p><%= my_perfil.localizacao %></p>
-                    <p><%= my_perfil.website %></p>
-                    <p><%= my_perfil.usuarios_id %></p>
                     
                 </form>
               </div>

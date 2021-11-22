@@ -7,7 +7,6 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/indexRouter');
-const usersRouter = require('./routes/users');
 const authRouter = require('./routes/authRouter');
 const cadRouter = require('./routes/cadRouter');
 const perfilRouter = require('./routes/perfilRouter');
@@ -32,7 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 app.use('/', authRouter);
 app.use('/', feedRouter);
