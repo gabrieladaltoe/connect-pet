@@ -9,7 +9,7 @@ router.get('/feed', SocialController.feed)
 router.get('/design-system', DesignSystemController.viewDesignSystem)
 router.get('/profile', SocialController.profileUser)
 router.get('/users', SocialController.viewUsers)
-router.get('/editarPerfil', SocialController.editProfile)
+
 
 
 module.exports = router

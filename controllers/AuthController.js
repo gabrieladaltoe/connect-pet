@@ -1,4 +1,4 @@
-const {Usuario} = require('../database/models');
+const {Usuario, Perfil} = require('../database/models');
 const bcrypt =  require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -43,6 +43,11 @@ module.exports = {
                                                   email: email,
                                                   senha:bcrypt.hashSync(senha, 10)
                                                 });
+            // cria a session com o id do novo usuario
+            req.session.usuario = JSON.stringify(resultado.id);
+
+            let resultadoPerfil = await Perfil.create({nome:nome,                 
+                                                       usuarios_id:resultado.id});                                                
                                                 return res.redirect("/feed");
 
         }

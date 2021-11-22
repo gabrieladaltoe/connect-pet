@@ -3,12 +3,14 @@ const fs = require("fs");
 const path = require('path');
 
 module.exports = {
-	showPerfil: async(req, res)=>{
-		console.log("entrou aki");
-		let perfil = await Perfil.findAll({where:{usuarios_id: req.session.usuario}})
+	showPerfil: async(req, res)=>{		
+		let perfil = await Perfil.findOne({where:{usuarios_id: req.session.usuario}})
+
+		console.log(perfil);
 		if (perfil) {
 			res.render("editar-perfil", {perfil});
 		} else {
+			console.log("entrou aki 4");
 			return res.redirect("/feed");
 		}
 	

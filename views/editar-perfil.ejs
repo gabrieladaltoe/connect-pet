@@ -20,7 +20,7 @@
 
         <main id="edit-profile">   <!--COLOCAR UM ID DA PAGINA-->
             <div class="editar-perfil">
-                <form action="/editarPerfil>" method="POST">
+                <form action="/editarPerfil>" method="GET">
                     <div class="edit-photo--wrap">
                         <div class="col-25-img">
                             <div class="img-user">
@@ -41,7 +41,7 @@
                             <label for="nome">Nome</label>
                         </div>
                         <div class="col-75">
-                            <input type="nome" name="nome" value="<%= perfil.nome %>" id="nome">
+                            <input type="nome" name="nome" value="<%= perfil.nome %>" id="nome">                           
                         </div>
                     </div>
 
@@ -51,7 +51,8 @@
                             <label for="biografia">Biografia</label>
                         </div>
                         <div class="col-75">
-                            <textarea id="biografia" name="biografia" ></textarea>
+                            <input type="biografia" name="biografia" value="<%= perfil.biografia %>" id="biografia">     
+                            
                         </div>
                     </div>               
                     
@@ -61,7 +62,7 @@
                             <label for="localizacao">Localização</label>
                         </div>
                         <div class="col-75">
-                            <input type="localizacao" id="localizacao" name="localizacao">
+                            <input type="localizacao" id="localizacao" name="localizacao" value="<%= perfil.localizacao %>">
                         </div>
                     </div>  
                     <div class="row">
@@ -69,13 +70,12 @@
                             <label for="website">WebSite</label>
                         </div>
                         <div class="col-75">
-                            <input type="website" id="website" name="website">
+                            <input type="website" id="website" name="website" value="<%= perfil.website %>">
                         </div>
                     </div>              
                     
                 <div class="row">
-                    <button class="btn btn-blue">Salvar Alteração</button>
-                    
+                    <button class="btn btn-blue">Salvar Alteração</button>                    
                 </div>
                 <div class="row-linha">
 
