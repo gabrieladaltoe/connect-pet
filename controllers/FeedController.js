@@ -3,7 +3,7 @@ const {Usuario,Perfil,Publicacao,Comentario,Curtida} = require('../database/mode
 module.exports = {
     feed: async (req, res) => {
         const public = await Publicacao.findAll();
-        return res.render('feed', { usuario: req.session.usuario, public: public })
+        return res.render('feed', { usuario: req.session.usuario, public: public, my_perfil: req.session.user })
     },
     feedById: async (req, res) => {
         const { id } = req.params
