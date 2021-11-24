@@ -1,8 +1,9 @@
-const {Usuario,Perfil,Publicacao,Comentario,Curtida} = require('../database/models');
+const {Usuario,Perfil,Publicacao,Comentario,Curtida, } = require('../database/models');
+const {Op} = require('sequelize');
 
 module.exports = {
     feed: async (req, res) => {
-        const public = await Publicacao.findAll();
+        const public = await Publicacao.findAll({ where: {[Op.not]:{usuarios_id:req.session.usuario.id}}});
         const perfil = await Perfil.findAll();
         return res.render('feed', { usuario:req.session.usuario, public: public, perfil:req.session.user})
     },

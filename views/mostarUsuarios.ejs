@@ -17,19 +17,23 @@
                             <button type="submit" class="btn btn-orange">Buscar</button>
                         </form>
                     </div>
-                    <% for(let amigo of amigosP){ %>
-
-                    <div class="lista-usuarios-item">
-
-                        <img src="<%=amigo.img_user%>" alt="imagem do usuário">
-                        <a href="#" class="usuario-nome"><%=amigo.nome%></a>
-                        <button class="btn btn-blue btn-seguir">
-                            <i class="fas fa-plus"></i>
-                            Seguir
-                        </button>
-
-                    </div>
-                    <% } %>
+                    
+                    <% for(let amigo of amigosA){%>
+                    
+                        <div class="lista-usuarios-item">
+                            
+                                <img src="<%=amigo.img_user%>" alt="imagem do usuário">
+                                <a href="#" class="usuario-nome">
+                                    <%=amigo.nome%>
+                                </a>
+                                <button class="btn btn-blue btn-seguir">
+                                    <i class="fas fa-plus"></i>
+                                    Seguir
+                                </button>
+                                
+                    
+                        </div>
+                        <%}%>
 
 
 
