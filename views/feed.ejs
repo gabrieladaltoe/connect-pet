@@ -11,7 +11,7 @@
                             <i id="post-edit-icon" class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             <p class="text">O que <%= usuario.nome_usuario %> está fazendo ?</p>
                         </div>
-                        <form class="formulario-postagem">
+                        <form class="formulario-postagem"method="POST"action="/posts"enctype="multipart/form-data">
                             <div class="input-group">
                                 <label for="insert-post">Label</label>
                                 <textarea name="insert-post" id="insert-post" cols="30" rows="10"></textarea>
@@ -19,7 +19,9 @@
                             <div class="form-post-group-btn">
                                 <div class="btn-media-group">
 
-                                    <button id="btn-camera" class="btn-insert-media">
+                                    <imput type="file" name="files"></imput>
+
+                                    <button type="submit" name="files"id="btn-camera" class="btn-insert-media">
                                         <i class="fas fa-camera"></i>
                                     </button>
 
@@ -37,44 +39,39 @@
 
                     </section>
 
-                    
                     <% JSON.stringify(public) %>
-                    <% for(let publicacao of public){ %>
-                    <section class="card-feed">
-                        <div class="header-feed card-feed-header">
-                            <div class="img-user" id="user-text">
-                                <img src="<%= publicacao.img_pub %>" alt="imagem-usuario">
-                                <div class="card-feed--header-text">
-                                    <a class="user-name-card">nome usuario</a>
-                                    <p class="text-feed">
-                                        <%= publicacao.texto %>
-                                    </p>
+                        <% for(let publicacao of public){ %>
+                            <section class="card-feed">
+                                <div class="header-feed card-feed-header">
+                                    <div class="img-user" id="user-text">
+                                        <img src="<%= publicacao.img_pub %>" alt="imagem-usuario">
+                                        <div class="card-feed--header-text">
+                                            <a class="user-name-card"><%= perfil.nome %></a>
+                                            <p class="text-feed">
+                                                <%= publicacao.texto %>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="image-feed">
-                            <img id="imgId" src="<%= publicacao.img_pub %>" alt="image-feed">
-                        </div>
-                    
-                        <div class="feed-comentarios">
-                            <button class="heart-feed-button">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                    
-                            <p class="likes">50 Likes</p>
-                            <a class="comentarios">3 Comentários</a>
-                        </div>
-                        
-                    </section>
-                    <% } %>
+                                <div class="image-feed">
+                                    <img id="imgId" src="<%= publicacao.img_pub %>" alt="image-feed">
+                                </div>
 
+                                <div class="feed-comentarios">
+                                    <button class="heart-feed-button">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+
+                                    <p class="likes">50 Likes</p>
+                                    <a class="comentarios">3 Comentários</a>
+                                </div>
+
+                            </section>
+                            <% } %>
 
                 </div>
             </main>
 
+    </body>
 
-
-
-            </body>
-
-            </html>
+</html>

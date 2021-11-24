@@ -1,70 +1,42 @@
-const {Usuario,Perfil,Publicacao,Comentario,Curtida} = require('../database/models');
+const {Usuario, Perfil, Publicacao} = require('../database/models');
 const bcrypt =  require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-
 module.exports = {
     showLogin: (req, res) => {
-
-        return res.render("index", {
+        res.redirect('/', {
             error: null
         });
     },
     login: async (req, res) => {
-        const { email, senha } = req.body;
-        const usuario = await Usuario.findOne({ where: { email } });
+        const {email_login, senha_login } = req.body;
+        const usuario = await Usuario.findOne({where:{email:email_login}});
+        
+        if(!bcrypt.compareSync(senha_login, usuario.senha) || !usuario){
+            return res.status(401).json({error:2,msg:"Usuário ou senha inválidos"});
+        }
        
-        
-        if (!bcrypt.compareSync(senha, usuario.senha) || !usuario) {
-            return res.redirect("/");
-        }
-        //     // gerar o token
+        // gerar o token
         usuario.senha = undefined;
-        let token = jwt.sign(usuario.toJSON(), "connectpet");
-        
+        let token = jwt.sign(usuario.toJSON(),"connectpet");
 
-        if (usuario) {
-            req.session.usuario = JSON.stringify(usuario);
-            req.session.usuario = usuario
-            return res.redirect("/feed");
+        req.session.usuario = usuario.toJSON()
+        //const id = req.session.usuario.id // 1 //req.body //req.session.id // req.params.id // sessionStorage.getItem('id')
+        const perfil = await Perfil.findOne({ where: { usuarios_id: usuario.id } })
+        let my_perfil = perfil.toJSON()
+        console.log(perfil)
+        req.session.user = perfil
 
-            // return res.redirect("/feed");
-        } else {
-            return res.render("/", { error: "Login/Senha inválidos" });
+        const publicacao= await Publicacao.findOne({ where: { usuarios_id: usuario.id } })
+        let my_publicacao = publicacao.toJSON()
+        console.log(publicacao)
+        req.session.userP = publicacao
 
-        }
+        return res.redirect("/feed");
     },
-    registrar: async(req, res) =>
-    {
-        console.log(req);
-        const {nome, nome_usuario, email, senha, senhaconfirm} = req.body;
-        if(senha !== senhaconfirm)
-        {
-            return alert("Senha nao confere.");
-        }
-        try
-        {
-            let usuario = await Usuario.create({nome:nome, 
-                                                  nome_usuario: nome_usuario,
-                                                  email: email,
-                                                  senha:bcrypt.hashSync(senha, 10)
-                                                });
-                                                req.session.usuario = usuario
-                                                return res.redirect("/feed");
-
-        }
-        catch(error)
-        {
-            console.log("erro ao cadastrar usuário" + console.error());
-        }
-    }, 
     logout: (req,res) =>
     {
         req.session.destroy();
         res.redirect("/");
     }
-    
-    
-    
-    
 }

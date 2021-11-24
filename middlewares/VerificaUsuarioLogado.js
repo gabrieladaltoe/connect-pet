@@ -1,9 +1,8 @@
-function auth(req, res, next) {
-    if(typeof(req.session.usuario) != "underfined"){
-        return next();
+module.exports = (req, res, next) => {
+    if(req.session.user){
+        //res.redirect("/feed")
+        next();
     } else {
-        return res.send("não esta logado")
+        res.redirect("/");
     }
 }
-
-module.exports = auth

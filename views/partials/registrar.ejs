@@ -3,33 +3,32 @@
     <div class="input-itens">
 
         <div class="input-group">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" placeholder="Nome">
+            <label for="nome_cad">Nome</label>
+            <input type="text" name="nome_cad" id="nome_cad" placeholder="Nome" required>
         </div>
 
         <div class="input-group">
-            <label for="nome_usuario">Nome de usuário</label>
-            <input type="text" name="nome_usuario" id="nome_usuario" placeholder="Nome do seu Pet">
-        </div>
-
-
-        <div class="input-group">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <label for="nome_usuario_cad">Nome de usuário</label>
+            <input type="text" name="nome_usuario_cad" id="nome_usuario_cad" placeholder="Nome de usuário" required>
         </div>
 
         <div class="input-group">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="Senha">
+            <label for="email_cad">E-mail</label>
+            <input type="email" name="email_cad" id="email_cad" placeholder="Email" required>
         </div>
 
         <div class="input-group">
-            <label for="senhaconfirm">Confirmar Senha</label>
-            <input type="password" name="senhaconfirm" id="senhaconfirm" placeholder=" Confirmar Senha">
+            <label for="senha_cad">Senha</label>
+            <input type="password" name="senha_cad" id="senha_cad" placeholder="Senha" required>
         </div>
-        <button type="submit" class="btn btn-blue btn-modal-cadastro">Confirmar e Enviar</button>
-
-
+        
+        <div class="input-group">
+            <label for="senha_confirm_cad">Confirmar Senha</label>
+            <input type="password" name="senha_confirm_cad" id="senha_confirm_cad" placeholder="Confirmar senha" required>
+        </div>
 
     </div>
+
+    <button type="submit" id="btn_enviar" class="btn btn-blue btn-modal-cadastro" >Enviar</button>
+
 </form>

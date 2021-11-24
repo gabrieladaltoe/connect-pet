@@ -1,0 +1,71 @@
+<%- include('../views/partials/head'); %>
+<%- include('../views/partials/header'); %>
+<%- include('../views/partials/aside'); %>
+<main id="edit-profile">   <!--COLOCAR UM ID DA PAGINA-->
+    
+            <div class="editar-perfil">
+                <form action="/editar?_method=PUT" method="POST">
+                    <div class="edit-photo--wrap">
+                        <div class="col-25-img">
+                            <div class="img-user" title="Arquivo em jpg ou png, com no mínimo 150px150px">
+                                <img src="<%= perfil.img_user %>" alt="imagem-usuario">
+                            </div>
+                        </div>
+                        <div class="edit-photo--text-items">                            
+                            <a href="#" class="link" >Adicionar nova foto de perfil</a><br>
+                            <a href="#" class="link">Remover foto de perfil</a>
+                        </div>
+                    </div>                
+
+                    <section class="row">
+                        <label for="input_nome">Nome</label>
+                        <input type="nome" name="input_nome" id="input_nome" disabled title="Nome do Pet" value='<%= perfil.nome %>' >
+                    </section>
+                    
+                    <section class="row">
+                        <label for="biografia">Biografia</label>
+                        <textarea id="biografia" name="biografia" disabled title="Biografia" ><%= perfil.biografia %></textarea>
+                    </section>               
+                    
+                    <section class="row">
+                        <label for="localizacao">Localização</label>
+                        <input type="localizacao" id="localizacao" name="localizacao" disabled title="Localização" value='<%= perfil.localizacao %>'>
+                    </section>  
+
+                    <section class="row">
+                        <label for="website">WebSite</label>
+                        <input type="website" id="website" name="website" disabled title="Website" value='<%= perfil.website %>'>
+                    </section>    
+                    
+                    <div class="btn_profile">
+                        <button type="submit" class="btn btn-blue">Salvar</button>
+                        <button type="button" class="btn btn-outline-orange" id="btnAlterar" onclick="alterar()">Alterar</button>
+                        <button type="reset" class="btn btn-outline-orange">Limpar</button>
+                    </div>
+                    
+                </form>
+              </div>
+        </main>
+
+    </div>
+
+    <script>
+        // habilita os campos para editar o perfil
+        function alterar(){
+            
+            let input_nome = document.getElementById('input_nome')
+            let localizacao = document.getElementById('localizacao')
+            let biografia = document.getElementById('biografia')
+            let website = document.getElementById('website')
+
+            input_nome.disabled = false
+            localizacao.disabled = false
+            biografia.disabled = false
+            website.disabled = false
+
+        }
+        
+    </script>
+</body>
+
+</html>

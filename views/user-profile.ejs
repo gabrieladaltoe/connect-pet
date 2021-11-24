@@ -8,17 +8,17 @@
                 <!--AQUI VAI O CÓDIGO DE CADA PÁGINA-->
                 <section class="user-data">
                     <div class="img-user">
-                        <img src="./images/img3.jpg" alt="imagem-usuario">
+                        <img src="<%=perfil.img_user%> " alt="imagem-usuario">
                     </div>
                   
 
                     <div class="user-bio">
-                        <p class="user-bio-name">Luluzinha <span>@luluzinha</span></p>
+                        <p class="user-bio-name"><%=perfil.nome%> <span>@<%=perfil.nome%> </span></p>
                         <p class="user-bio-text">
-                            Biografia do pet com no máx 140 caracteres
+                            <%=perfil.bigrafia%> 
                         </p>
 
-                        <p class="user-bio-location"><i class="fas fa-map-marker-alt"></i>São Paulo, SP</p>
+                        <p class="user-bio-location"><i class="fas fa-map-marker-alt"></i><%=perfil.localizacao%> </p>
 
                     </div>
 
@@ -34,15 +34,15 @@
                 <section class="card-feed">
                     <div class="header-feed card-feed-header">
                         <div class="img-user">
-                            <img src="./images/img3.jpg" alt="imagem-usuario">
+                            <img src="<%=perfil.img_user%> " alt="imagem-usuario">
                             <div class="card-feed--header-text">
-                                <a class="user-name-card">@luluzinha</a>
-                                <p class="text-feed">Olhem que linda está Lulu brincando no parquinho!</p>
+                                <a class="user-name-card">@<%=perfil.nome%> </a>
+                                <p class="text-feed"><%=publicacao.texto%>></p>
                             </div>
                         </div>
                     </div>
                     <div class="image-feed">
-                        <img id="feed-image" src="./images/img2.jpg" alt="image-feed">
+                        <img id="feed-image" src="<%=publicacao.img_pub%>" alt="image-feed">
                     </div>
 
                     <div class="feed-comentarios">

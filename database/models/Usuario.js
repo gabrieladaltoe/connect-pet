@@ -8,8 +8,6 @@ module.exports = (sequelize, DataTypes) =>
             nome_usuario: DataTypes.STRING,
             email: {type: DataTypes.STRING, allowNull: false},
             senha: DataTypes.STRING
-            
-
         },
         {
             tableName: "usuarios",

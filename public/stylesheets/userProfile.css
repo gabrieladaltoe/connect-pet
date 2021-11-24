@@ -148,9 +148,9 @@ textarea {
 }
 
 .img-user img {
-  width: 100px;
-  height: 100px;
-  margin: 25px;
+  width: 150px;
+  height: 150px;
+  /* margin: 25px; */
 }
 
 .image-feed img {
@@ -212,10 +212,10 @@ textarea {
   }
 
   .img-user img {
-    width: 100px;
+    /* width: 100px;
     height: 100px;
     margin: 20px 0;
-    object-fit: cover;
+    object-fit: cover; */
 }
 
   .btn-seguir--user-profile {

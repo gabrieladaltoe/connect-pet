@@ -6,7 +6,3 @@ Publicacao.findByPk(1, {include:['usuarios', 'comentarios', 'curtidas']}).then(
         sequelize.close();
         }
 )
-/*
-Publicacao.findAll().then(
-    publicacoes => console.log(publicacoes.map(p => p.toJSON()))
-)*/
