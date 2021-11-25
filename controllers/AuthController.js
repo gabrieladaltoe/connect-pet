@@ -21,7 +21,6 @@ module.exports = {
         if(!bcrypt.compareSync(senha, usuario.senha) || !usuario){
            return res.redirect("/");
         }
-
         // gerar o token
         usuario.senha = undefined;
         let token = jwt.sign(usuario.toJSON(), "connectpet");   
@@ -49,7 +48,6 @@ module.exports = {
             let resultadoPerfil = await Perfil.create({nome:nome,                 
                                                        usuarios_id:resultado.id});                                                
                                                 return res.redirect("/feed");
-
         }
         catch(error)
         {
