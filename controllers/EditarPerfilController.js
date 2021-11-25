@@ -13,6 +13,7 @@ module.exports = {
 			console.log("entrou aki 4");
 			return res.redirect("/feed");
 		}
+		
 	
 	},
 	registrarPerfil:async(req,res) =>{
@@ -28,6 +29,8 @@ module.exports = {
 
 												 												 
             return res.redirect("/feed");
+
+
         }
         catch(error){
 			return console.log(error)
