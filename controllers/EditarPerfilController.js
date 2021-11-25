@@ -2,6 +2,8 @@ const {Perfil} = require('../database/models');
 const fs = require("fs");
 const path = require('path');
 
+
+
 module.exports = {
 	showPerfil: async(req, res)=>{		
 		let perfil = await Perfil.findOne({where:{usuarios_id: req.session.usuario}})
@@ -13,10 +15,11 @@ module.exports = {
 			console.log("entrou aki 4");
 			return res.redirect("/feed");
 		}
-		
+
 	
 	},
 	registrarPerfil:async(req,res) =>{
+		
 		const {nome, biografia, localizacao, website, img_user} = req.body;		
 		try
         {
