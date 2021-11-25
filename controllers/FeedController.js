@@ -17,6 +17,8 @@ module.exports = {
         const { id } = req.params
         let usuarios = await Usuario.findByPk(id)
         return res.render('feed', { usuarios });
+    },
+    post: async(req, res) => {
+        const {filename} = req.file
     }
 }
-

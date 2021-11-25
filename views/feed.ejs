@@ -19,11 +19,11 @@
                             <div class="form-post-group-btn">
                                 <div class="btn-media-group">
 
-                                    <imput type="file" name="files"></imput>
+                                    <!-- <imput type="file" name="files"></imput> -->
 
-                                    <button type="submit" name="files"id="btn-camera" class="btn-insert-media">
+                                    <input type="file" name="image" id="btn-camera" accept="image/*" class="btn-insert-media">
                                         <i class="fas fa-camera"></i>
-                                    </button>
+                                    </input>
 
                                     <button id="btn-play" class="btn-insert-media">
                                         <i class="fas fa-play"></i>
@@ -40,21 +40,21 @@
                     </section>
 
                     <% JSON.stringify(public) %>
-                        <% for(let publicacao of public){ %>
+                        <% for(let pubFeed of public){ %>
                             <section class="card-feed">
                                 <div class="header-feed card-feed-header">
                                     <div class="img-user" id="user-text">
-                                        <img src="<%= publicacao.img_pub %>" alt="imagem-usuario">
+                                        <img src="<%= pubFeed.img_pub %>" alt="imagem-usuario">
                                         <div class="card-feed--header-text">
                                             <a class="user-name-card"><%= perfil.nome %></a>
                                             <p class="text-feed">
-                                                <%= publicacao.texto %>
+                                                <%= pubFeed.texto %>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="image-feed">
-                                    <img id="imgId" src="<%= publicacao.img_pub %>" alt="image-feed">
+                                    <img id="imgId" src="<%= pubFeed.img_pub %>" alt="image-feed">
                                 </div>
 
                                 <div class="feed-comentarios">
