@@ -36,6 +36,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/', amizadeRouter);
 
+
 app.use('/', authRouter);
 app.use('/', feedRouter);
 app.use('/', perfilRouter);
