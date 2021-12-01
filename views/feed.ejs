@@ -9,19 +9,21 @@
                     <section class="card-postagem">
                         <div class="title card-postagem-titulo">
                             <i id="post-edit-icon" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            <p class="text">O que {nome do seu pet} está fazendo ?</p>
+                            <p class="text">O que <%= usuario.nome_usuario %> está fazendo ?</p>
                         </div>
-                        <form class="formulario-postagem">
+                        <form class="formulario-postagem" method="POST" action="/feed" enctype="multipart/form-data">
                             <div class="input-group">
-                                <label for="insert-post">Label</label>
-                                <textarea name="insert-post" id="insert-post" cols="30" rows="10"></textarea>
+                                <label for="insertPost">Label</label>
+                                <textarea name="insertPost" id="insert-post" cols="30" rows="10"></textarea>
                             </div>
                             <div class="form-post-group-btn">
                                 <div class="btn-media-group">
 
-                                    <button id="btn-camera" class="btn-insert-media">
+                                    <!-- <imput type="file" name="files"></imput> -->
+
+                                    <input type="file" name="image" id="btn-camera" accept="image/*" class="btn-insert-media" value="fas fa-camera">
                                         <i class="fas fa-camera"></i>
-                                    </button>
+                                    </input>
 
                                     <button id="btn-play" class="btn-insert-media">
                                         <i class="fas fa-play"></i>
@@ -29,47 +31,47 @@
 
                                 </div>
 
-                                <input id="btn-post" class="btn btn-blue" type="button" value="Postar">
+                                <input type="submit" id="btn-post" class="btn btn-blue"  value="Postar">
 
 
                             </div>
                         </form>
 
                     </section>
-                 
-                    <section class="card-feed">
-                        <div class="header-feed card-feed-header">
-                            <div class="img-user" id="user-text">
-                                <img src="./images/img3.jpg" alt="imagem-usuario">
-                                <div class="card-feed--header-text">
-                                    <a class="user-name-card">@numeUsuario</a>                                 
-                                    <p class="text-feed">Olhem que linda está Lulu brincando no parquinho!</p>
+
+                    <% JSON.stringify(public) %>
+                        <% for(let pubFeed of public){ %>
+                            <section class="card-feed">
+                                <div class="header-feed card-feed-header">
+                                    <div class="img-user" id="user-text">
+                                        <img src="<%= pubFeed.img_user%>" alt="imagem-usuario">
+                                        <div class="card-feed--header-text">
+                                            <a class="user-name-card"><%= pubFeed.nome %></a>
+                                            <p class="text-feed">
+                                                <%= pubFeed.texto %>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="image-feed">
-                            <img id="feed-image" src="./images/img2.jpg" alt="image-feed">
-                        </div>
+                                <div class="image-feed">
+                                    <img id="imgId" src="images_pub/<%= pubFeed.img_pub %>" alt="image-feed">
+                                </div>
 
-                        <div class="feed-comentarios">
-                            <button class="heart-feed-button">
-                                <i class="fas fa-heart"></i>
-                            </button>
+                                <div class="feed-comentarios">
+                                    <button class="heart-feed-button">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
 
-                            <p class="likes">50 Likes</p>
-                            <a class="comentarios">3 Comentários</a>
+                                    <p class="likes">50 Likes</p>
+                                    <a class="comentarios">3 Comentários</a>
+                                </div>
 
-                        </div>
-
-
-                    </section>
+                            </section>
+                            <% } %>
 
                 </div>
             </main>
 
+    </body>
 
-
-
-            </body>
-
-            </html>
+</html>

@@ -11,8 +11,8 @@ module.exports = {
         biografia: 'Me chamo Pretinha',
         localizacao: 'Belém-PA',
         website: 'pretinha.com.br',
-        img_user: "https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fwww.proteste.org.br%2Fanimais-de-estimacao%2Fgatos%2Fnoticia%2Fgatos-tem-medo-de-pepino&psig=AOvVaw2ZhLzA46jupyLfuD-F-Iux&ust=1635545696936000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjps9mQ7vMCFQAAAAAdAAAAABAD",
-        usuarios_id: 1
+        img_user: "https://www.petz.com.br/blog/wp-content/uploads/2017/04/comportamento-dos-gatos-1.jpg",
+        usuarios_id: 1,
       },
       {
         id: 2,
@@ -20,8 +20,8 @@ module.exports = {
         biografia: 'Me chamo Bob',
         localizacao: 'Belém-PA',
         website: 'bob.com.br',
-        img_user: "https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fseres.vet%2Fblog%2Fcomo-dar-remedio-de-verme-para-gato%2F&psig=AOvVaw2ZhLzA46jupyLfuD-F-Iux&ust=1635545696936000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjps9mQ7vMCFQAAAAAdAAAAABAJ",
-        usuarios_id: 2
+        img_user: "https://s2.glbimg.com/_bDnKvOpodO6FkZL8zJ0BFDtyAA=/e.glbimg.com/og/ed/f/original/2020/10/30/jamie-street-utre5dcgeyg-unsplash.jpg",
+        usuarios_id: 2,
       },
       {
         id: 3,
@@ -29,8 +29,8 @@ module.exports = {
         biografia: 'Me chamo Fúria',
         localizacao: 'Belém-PA',
         website: 'furia.com.br',
-        img_user: "https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fwww.petz.com.br%2Fblog%2Fbem-estar%2Fcachorro-de-orelha-em-pe%2F&psig=AOvVaw3RxtTuk4oRVQQbN8aS4m62&ust=1635545890618000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIiZiLSR7vMCFQAAAAAdAAAAABAD",
-        usuarios_id: 3
+        img_user: "https://conteudo.imguol.com.br/c/entretenimento/fd/2021/01/04/gato-1609773071379_v2_1170x540.jpg.webp",
+        usuarios_id: 3,
       },
       {
         id: 4,
@@ -38,8 +38,8 @@ module.exports = {
         biografia: 'Me chamo Tob',
         localizacao: 'Belém-PA',
         website: 'tob.com.br',
-        img_user: "https://www.google.com.br/url?sa=i&url=https%3A%2F%2Frevistacasaejardim.globo.com%2FCasa-e-Jardim%2FDicas%2FPets%2Fnoticia%2F2017%2F05%2F15-sinais-mostram-que-o-seu-cachorro-esta-doente.html&psig=AOvVaw3RxtTuk4oRVQQbN8aS4m62&ust=1635545890618000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIiZiLSR7vMCFQAAAAAdAAAAABAJ",
-        usuarios_id: 4
+        img_user: "https://s2.glbimg.com/slaVZgTF5Nz8RWqGrHRJf0H1PMQ=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/U/e/NTegqdSe6SoBAoQDjKZA/cachorro.jpg",
+        usuarios_id: 4,
       },
       
     ])

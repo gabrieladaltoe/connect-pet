@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) =>
         u.hasMany(models.Curtida, {as:'usuCurtida', foreignKey:'usuarios_id'});
         u.hasMany(models.Perfil, {as:'perfis', foreignKey:'usuarios_id'});
         u.belongsToMany(
-            models.Usuario,
+            models.Amizade,
             {
               as: 'amigos', // nome do relacionamento
               through: 'amizades', // nome da tabela intermediaria

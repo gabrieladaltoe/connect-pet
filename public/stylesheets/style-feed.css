@@ -1,4 +1,8 @@
 /*section post*/
+:root {
+  --color-shadow3: rgba(0, 0, 0, 0.12);
+  --color-shadow4: rgba(0, 0, 0, 0.24);
+}
 
 .container-feed {
   margin: 50px;
@@ -16,6 +20,7 @@
   border-radius: 08px;
   padding: 0.8rem;
   justify-content: center;
+  box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4);
 }
 
 .card-postagem-titulo {
@@ -54,6 +59,7 @@ textarea {
 .card-feed {
   margin-top: 50px;
   position: relative;
+  box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4);
 }
 
 .card-feed-header .img-user {
@@ -90,8 +96,8 @@ textarea {
 }
 
 .img-user img {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
 }
 
 .image-feed img {

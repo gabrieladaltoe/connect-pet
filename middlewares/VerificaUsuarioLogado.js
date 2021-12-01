@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
-    console.log(req.session.usuario)
-    if(req.session.usuario){
+    if(req.session.user){
+        //res.redirect("/feed")
         next();
     } else {
         res.redirect("/");

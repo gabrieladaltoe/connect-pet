@@ -7,7 +7,3 @@ Curtida.findByPk(1, {include:['usuarios']}).then(
         sequelize.close();
         }
 )
-/*
-Curtida.findAll().then(
-    curtidas => console.log(curtidas.map(c => c.toJSON()))
-)*/

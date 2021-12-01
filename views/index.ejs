@@ -1,55 +1,56 @@
 <%- include('../views/partials/head'); %>
-<body>
-    <main id="login-page">
-        <section class="left-side">
-            <img src="/images/img-bg-login.jpg" alt="imagem com animais" class="image-login">
-        </section>
-        <section class="right-side">
-            <div class="login-content">
-                <img src="/images/logo500.png" alt="logo ConnectPet" class="pet-logo">
-                <p class="slogan-login">Aqui o mundo é mais divertido.</p>
+
+    <body>
+        <main id="login-page">
+            <section class="left-side">
+                <img src="/images/img-bg-login.jpg" alt="imagem com animais" class="image-login">
+            </section>
+
+            <section class="right-side">
+                <div class="login-content">
+                    <img src="/images/logo500.png" alt="logo ConnectPet" class="pet-logo">
+                    <p class="slogan-login">Aqui o mundo é mais divertido.</p>
+                </div>
+
+                <div class="login-btns">
+                    <button class="btn btn-orange login-btn-orange" onclick="ModalLogin.open()">Entrar</button>
+                    <button class="btn btn-blue login-btn-blue" onclick="ModalSubscribe.open()">Inscrever-se</button>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+            </section>
+        </main>
+
+        <div id="modal-login" class="md-login">
+
+            <div class="modal-content">
+                <button class="close-modal" onclick="ModalLogin.close()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2 class="modal-title">
+                    Entrar na sua conta Connect Pet
+                </h2>
+
+                <%- include('../views/partials/login') %>
+
             </div>
-            <div class="login-btns">
-                <button class="btn btn-orange login-btn-orange" onclick="ModalLogin.open()">Entrar</button>
-                <button class="btn btn-blue login-btn-blue" onclick="ModalSubscribe.open()">Inscrever-se</button>
-                <a href="#">Esqueci minha senha</a>
+
+        </div>
+
+        <div class="md-subscribe" id="modal-subscribe">
+
+            <div class="modal-content">
+
+                <button class="close-modal" onclick="ModalSubscribe.close()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2 class="modal-title">
+                    Crie sua conta
+                </h2>
+
+                <%- include('../views/partials/registrar') %>
+
             </div>
-        </section>
-    </main>
-    <footer class="footer-content">
-        <div class="copyright">
-            <p>Desenvolvido por Camila, Gabriela e Marcelo.</p>
+
         </div>
-        <nav class="footer-menu-nav">
-            <ul class="footer-menu">
-                <li>Ajude</li>
-                <li>FAQ</li>
-                <li>Contato</li>
-            </ul>
-        </nav>
-    </footer>
-    <div id="modal-login" class="md-login">
-        <div class="modal-content">
-            <button class="close-modal" onclick="ModalLogin.close()">
-                <i class="fas fa-times"></i>
-            </button>
-            <h2 class="modal-title">
-                Entrar na sua conta Connect Pet
-            </h2>
-            <%- include('../views/partials/login') %>
-        </div>
-    </div>
-    <div class="md-subscribe" id="modal-subscribe">
-       <div class="modal-content">
-        <button class="close-modal" onclick="ModalSubscribe.close()">
-            <i class="fas fa-times"></i>
-        </button>
-        <h2 class="modal-title">
-            Crie sua conta
-        </h2>
-        <%- include('../views/partials/registrar') %>
-       </div>
-    </div>
-<script src="/javascripts/script.js"></script>
-</body>
-</html>
+
+        <%- include('../views/partials/footer') %>

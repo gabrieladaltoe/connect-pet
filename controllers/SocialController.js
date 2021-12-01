@@ -1,19 +1,16 @@
-const {Publicacao} = require('../database/models');
+//const {Publicacao} = require('../database/models');
 const SocialController = {
 		index: (req, res) => {
 			res.render('index');
 		},
-		feed: async (req, res) => {
-			res.render('feed');
-		},
-		profileUser : (req,res) => {
+		profile : (req,res) => {
 			res.render('user-profile');
 		},
 		viewUsers : (req,res) => {
-			res.render('listar-usuarios');
+			res.render('mostarusuarios');
 		},
-		editProfile : (req,res) => {
-			res.render('editar-perfil');
+		quemSomos : (req,res) => {
+			res.render('contato');
 		}
 		
 	}

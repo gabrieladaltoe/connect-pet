@@ -1,15 +1,15 @@
-var express = require('express')
+const express = require('express')
 const SocialController = require('../controllers/SocialController')
+const Feed = require('../controllers/FeedController')
 const DesignSystemController = require('../controllers/DesignSystemController')
-var router = express.Router()
+const router = express.Router()
 
 /* GET home page. */
 router.get('/', SocialController.index)
-router.get('/feed', SocialController.feed)
+router.get('/feed', Feed.feed)
 router.get('/design-system', DesignSystemController.viewDesignSystem)
-router.get('/profile', SocialController.profileUser)
-router.get('/users', SocialController.viewUsers)
-
-
+router.get('/user-profile', SocialController.profile)
+router.get('/contato', SocialController.quemSomos)
+router.get('/usuarios', SocialController.viewUsers)
 
 module.exports = router
