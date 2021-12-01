@@ -42,7 +42,9 @@
 
 .row input[type=nome],
 input[type=localizacao],
-input[type=website] {
+input[type=website],
+input[type=biografia]
+ {
   outline: none;
   border: 2px solid #C4C4C4;
   color: rgba(124, 120, 120, 1);
@@ -60,14 +62,14 @@ input[type=nome]:focus {
 input[type=localizacao]:focus {
   border: 3px solid #555;
 }
+input[type=biografia]:focus {
+  border: 3px solid #555;
+ }
 
 input[type=website]:focus {
   border: 3px solid #555;
 }
 
-textarea :focus {
-  border: 3px solid #555;
-}
 
 .row label {
   top: 29px;
@@ -78,15 +80,6 @@ textarea :focus {
   display: inline-block;
 }
 
-.row textarea {
-  outline: none;
-  border: 2px solid #C4C4C4;
-  border-radius: 15px;
-  padding: 10px;
-  color: rgba(124, 120, 120, 1);
-  font-size: 1.1rem;
-  width: 100%;
-}
 
 .edit-photo--wrap {
   /* margin: 25px auto; */
