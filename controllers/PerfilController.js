@@ -2,12 +2,11 @@ const {Usuario, Perfil} = require('../database/models');
 
 module.exports = {
 	perfil: async (req, res)=>{
+		const id = req.session.usuario.id 
+		const my_perfil = await Perfil.findOne({where:{usuarios_id:id}})
+		let perfil = my_perfil.toJSON()
 
-		// const id = req.session.usuario.id // 1 //req.body //req.session.id // req.params.id // sessionStorage.getItem('id')
-		// const perfil = await Perfil.findOne({where:{usuarios_id:id}})
-		// let my_perfil = perfil.toJSON()
-
-		res.status(201).render('perfil', {usuario:req.session.usuario,perfil:req.session.user})
+		res.status(201).render('perfil', {perfil:perfil})  
 	},
 	editar: async (req,res) =>{
 
