@@ -15,7 +15,7 @@
 
 .card-postagem {
   width: 43rem;
-  height: 25rem;
+  /*height: 25rem;*/
   background: white;
   border-radius: 08px;
   padding: 0.8rem;
@@ -111,6 +111,13 @@ textarea {
   margin: auto;
 }
 
+.img-feed-user img{
+     width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
+}
+
 #user-text {
   width: 100%;
 }
@@ -122,16 +129,17 @@ textarea {
 
 .feed-comentarios {
   display: flex;
-  position: absolute;
+  /*position: absolute;
   bottom: 130px;
-  left: 25px;
-  width: 50%;
+  left: 25px;*/
+  padding: 1rem 1.5rem;
+  justify-self: flex-start;
+  align-self: center;
+  width: 100%;
 }
 
 .feed-comentarios i {
   color: hsla(26, 98%, 48%, 1);
-  width: 36px;
-  height: 41px;
   font-size: 36px;
 }
 
@@ -143,4 +151,17 @@ textarea {
 .feed-comentarios .comentarios {
   font-size: 24px;
   margin-left: 10px;
+}
+
+
+.titulo-para-postar {
+  color: #7C7878;
+  margin: 0;
+  margin-bottom: 0;
+}
+
+.btn-media-group{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
