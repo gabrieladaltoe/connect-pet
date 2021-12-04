@@ -102,13 +102,15 @@ textarea {
 
 .image-feed img {
   max-width: 39.35rem;
-  max-height: 32.21rem;
+  /* max-height: 21.21rem; */
   width: auto;
-  height: auto;
-  position: absolute;
+  height: 440px;
+  position: static;
   top: 150px;
   left: 25px;
   margin: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .img-feed-user img{

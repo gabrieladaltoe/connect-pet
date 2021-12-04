@@ -158,13 +158,15 @@ textarea {
 
 .image-feed img {
   max-width: 39.35rem;
-  max-height: 32.21rem;
+  /* max-height: 21.21rem; */
   width: auto;
-  height: auto;
+  height: 440px;
   position: static;
   top: 150px;
   left: 25px;
   margin: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .heart-feed-button {
@@ -208,6 +210,17 @@ textarea {
 }
 .form-post-group-btn input[type="file"] {
   display: none;
+}
+
+.img-user--profile{
+  margin-top: 34px;
+}
+
+.img-user--profile img{
+  width: 130px;
+  height: 130px;
+  border-radius: 73px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {
