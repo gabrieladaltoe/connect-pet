@@ -9,7 +9,7 @@
                     <section class="card-postagem">
                         <div class="title card-postagem-titulo">
                             <i id="post-edit-icon" class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                            <p class="text">O que <%= usuario.nome_usuario %> está fazendo ?</p>
+                            <p class="text titulo-para-postar">O que <%= usuario.nome_usuario %> está fazendo ?</p>
                         </div>
                         <form class="formulario-postagem" method="POST" action="/feed" enctype="multipart/form-data">
                             <div class="input-group">
@@ -21,13 +21,14 @@
 
                                     <!-- <imput type="file" name="files"></imput> -->
 
-                                    <input type="file" name="image" id="btn-camera" accept="image/*" class="btn-insert-media" value="fas fa-camera">
-                                        <i class="fas fa-camera"></i>
-                                    </input>
+                                    <label class="btn-insert-media"><i class="fas fa-camera"></i>
+                                        <input type="file" name="image" id="btn-camera" accept="image/*" class="btn-insert-media" value="fas fa-camera">
+                                    </label>
+                                        
 
-                                    <button id="btn-play" class="btn-insert-media">
+                                    <!--<button id="btn-play" class="btn-insert-media">
                                         <i class="fas fa-play"></i>
-                                    </button>
+                                    </button>-->
 
                                 </div>
 
@@ -44,7 +45,7 @@
                             <section class="card-feed">
                                 <div class="header-feed card-feed-header">
                                     <div class="img-user" id="user-text">
-                                        <img src="<%= pubFeed.img_user%>" alt="imagem-usuario">
+                                        <img src="<%= pubFeed.img_user%>" alt="imagem-usuario" class="img-feed-user">
                                         <div class="card-feed--header-text">
                                             <a class="user-name-card"><%= pubFeed.nome %></a>
                                             <p class="text-feed">
@@ -54,7 +55,7 @@
                                     </div>
                                 </div>
                                 <div class="image-feed">
-                                    <img id="imgId" src="images_pub/<%= pubFeed.img_pub %>" alt="image-feed">
+                                   <img id="imgId" src="images_pub/<%= pubFeed.img_pub %>" alt="image-feed">
                                 </div>
 
                                 <div class="feed-comentarios">
@@ -62,8 +63,8 @@
                                         <i class="fas fa-heart"></i>
                                     </button>
 
-                                    <p class="likes">50 Likes</p>
-                                    <a class="comentarios">3 Comentários</a>
+                                    <p class="likes text-feed">50 Likes</p>
+                                    <!--<a class="comentarios text-feed">3 Comentários</a>-->
                                 </div>
 
                             </section>

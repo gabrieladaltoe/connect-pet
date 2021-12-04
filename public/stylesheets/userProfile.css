@@ -64,7 +64,7 @@
 
 .card-postagem {
   width: 43rem;
-  height: 25rem;
+  /*height: 25rem;*/
   background: white;
   border-radius: 08px;
   padding: 0.8rem;
@@ -96,6 +96,7 @@ textarea {
   justify-content: space-between;
   position: relative;
   margin-top: 10px;
+  align-items: center;
 }
 
 .form-post-group-btn .btn-post {
@@ -131,7 +132,7 @@ textarea {
   font-size: 1.2rem;
   font-weight: bold;
   color: rgb(61, 61, 61);
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .card-feed--header-text p {
@@ -148,57 +149,79 @@ textarea {
 }
 
 .img-user img {
-  width: 150px;
-  height: 150px;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  object-fit: cover;
   /* margin: 25px; */
 }
 
 .image-feed img {
   max-width: 39.35rem;
-  max-height: 32.21rem;
+  /* max-height: 21.21rem; */
   width: auto;
-  height: auto;
+  height: 440px;
   position: static;
   top: 150px;
   left: 25px;
   margin: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .heart-feed-button {
   border: 0;
-  background: transparent;
-  cursor: pointer;
+    background: transparent;
+    cursor: pointer;
+    /* padding: 0; */
+    height: 0px;
+    margin: 0 10px 0 0;
 }
 
 .feed-comentarios {
   display: flex;
-  position: static;
+  /*position: static;*/
   /* bottom: 130px; */
   /* left: 25px; */
-  width: 100%;
-  margin: 10px 30px;
+ 
+  padding: 1rem 1.5rem;
   justify-self: flex-start;
-  align-self: flex-start;
+  align-self: center;
+  width: 100%;
 }
 
 .feed-comentarios i {
   color: hsla(26, 98%, 48%, 1);
-  width: 36px;
-  height: 41px;
-  font-size: 36px;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
 .feed-comentarios .likes {
-  font-size: 24px;
+  font-size: 1rem;
   margin-left: 10px;
+  color: rgb(61, 61, 61);
 }
+
 
 .feed-comentarios .comentarios {
-  font-size: 24px;
+  font-size: 1rem;
   margin-left: 10px;
+  color: rgb(61, 61, 61);
+}
+.form-post-group-btn input[type="file"] {
+  display: none;
 }
 
+.img-user--profile{
+  margin-top: 34px;
+}
+
+.img-user--profile img{
+  width: 130px;
+  height: 130px;
+  border-radius: 73px;
+  object-fit: cover;
+}
 
 @media screen and (max-width: 500px) {
   .container-user-profile{
