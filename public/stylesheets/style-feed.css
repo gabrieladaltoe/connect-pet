@@ -1,4 +1,8 @@
 /*section post*/
+:root {
+  --color-shadow3: rgba(0, 0, 0, 0.12);
+  --color-shadow4: rgba(0, 0, 0, 0.24);
+}
 
 .container-feed {
   margin: 50px;
@@ -11,11 +15,12 @@
 
 .card-postagem {
   width: 43rem;
-  height: 25rem;
+  /*height: 25rem;*/
   background: white;
   border-radius: 08px;
   padding: 0.8rem;
   justify-content: center;
+  box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4);
 }
 
 .card-postagem-titulo {
@@ -54,6 +59,7 @@ textarea {
 .card-feed {
   margin-top: 50px;
   position: relative;
+  box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4);
 }
 
 .card-feed-header .img-user {
@@ -90,19 +96,28 @@ textarea {
 }
 
 .img-user img {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
 }
 
 .image-feed img {
   max-width: 39.35rem;
-  max-height: 32.21rem;
+  /* max-height: 21.21rem; */
   width: auto;
-  height: auto;
-  position: absolute;
+  height: 440px;
+  position: static;
   top: 150px;
   left: 25px;
   margin: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.img-feed-user img{
+     width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
 }
 
 #user-text {
@@ -116,16 +131,17 @@ textarea {
 
 .feed-comentarios {
   display: flex;
-  position: absolute;
+  /*position: absolute;
   bottom: 130px;
-  left: 25px;
-  width: 50%;
+  left: 25px;*/
+  padding: 1rem 1.5rem;
+  justify-self: flex-start;
+  align-self: center;
+  width: 100%;
 }
 
 .feed-comentarios i {
   color: hsla(26, 98%, 48%, 1);
-  width: 36px;
-  height: 41px;
   font-size: 36px;
 }
 
@@ -137,4 +153,17 @@ textarea {
 .feed-comentarios .comentarios {
   font-size: 24px;
   margin-left: 10px;
+}
+
+
+.titulo-para-postar {
+  color: #7C7878;
+  margin: 0;
+  margin-bottom: 0;
+}
+
+.btn-media-group{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }

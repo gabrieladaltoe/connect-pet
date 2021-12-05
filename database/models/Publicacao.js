@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
         {
             id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement:true},
             texto: DataTypes.STRING,
+            data: { type:DataTypes.DATE, allowNull: false },
             img_pub: DataTypes.STRING,
             usuarios_id: DataTypes.INTEGER
         },
@@ -11,15 +12,11 @@ module.exports = (sequelize, DataTypes) => {
             tableName: "publicacoes",
             timestamps: false
         }
-)
-p.associate = (models)=> {
-    p.hasMany(models.Comentario, {as:'comentarios', foreignKey:'publicacoes_id'});
-    p.belongsTo(models.Usuario, {as:'usuarios', foreignKey:'usuarios_id'});
-    p.hasMany(models.Curtida, {as:'curtidas', foreignKey:'publicacoes_id'});
+    )
+    p.associate = (models)=> {
+        p.hasMany(models.Comentario, {as:'comentarios', foreignKey:'publicacoes_id'});
+        p.belongsTo(models.Usuario, {as:'usuarios', foreignKey:'usuarios_id'});
+        p.hasMany(models.Curtida, {as:'curtidas', foreignKey:'publicacoes_id'});
+    }
+    return p;
 }
-// testando git
-
-return p;
-}
-
-//teste3

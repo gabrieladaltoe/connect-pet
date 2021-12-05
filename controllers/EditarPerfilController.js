@@ -10,7 +10,9 @@ module.exports = {
 
 		console.log(perfil);
 		if (perfil) {
+
 			res.render("editar-perfil", {perfil});
+			
 		} else {
 			console.log("entrou aki 4");
 			return res.redirect("/feed");
@@ -19,7 +21,7 @@ module.exports = {
 	
 	},
 	registrarPerfil:async(req,res) =>{
-		
+
 		const {nome, biografia, localizacao, website, img_user} = req.body;		
 		try
         {

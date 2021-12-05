@@ -11,6 +11,8 @@
     #f36c02 105.86%,
     #f35902 105.87%
   );
+  --color-shadow3: rgba(0, 0, 0, 0.12);
+  --color-shadow4: rgba(0, 0, 0, 0.24);
 }
 * {
   margin: 0;
@@ -40,6 +42,15 @@ a {
 }
 
 /*---------Estilos Botões------------*/
+button {
+  margin: 1rem;
+}
+
+.btn_profile {
+  display: flex;
+  justify-content: center;
+  
+}
 
 .btn {
   padding: 0.6rem 1.7rem;
@@ -92,6 +103,9 @@ a {
   height: 50px;
   border-radius: 50%;
   font-size: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-insert-media:hover {
@@ -102,9 +116,9 @@ a {
 /*IMAGEM DE PERFIL USUARIO*/
 
 .img-user img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+  /* width: 150px;
+  height: 150px; 
+  object-fit: cover;*/
   border-radius: 50%;
 }
 
@@ -231,8 +245,9 @@ footer {
 }
 .footer-menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
+  padding-right: 50px;
 }
 .footer-menu li {
   list-style: none;
@@ -459,6 +474,7 @@ aside .nav-lateral ul li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 14px 28px var(--color-shadow3), 0 10px 10px var( --color-shadow4);
 }
 
 .lista-usuarios-item {
@@ -493,6 +509,27 @@ aside .nav-lateral ul li a:hover {
 
 .lista-usuarios-item .btn-seguir {
   margin-left: auto;
+  margin-right: 0;
+}
+
+.footer-menu li a{
+  color: #fff !important;
+}
+
+.footer-menu li a:hover{
+  opacity: 0.8;
+}
+
+.contato-lista{
+  width: 100%;
+}
+
+.contato-title-h1 {
+  color: var(--light-blue);
+  font-size: 1.8rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 500px) {

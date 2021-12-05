@@ -10,7 +10,7 @@ module.exports = {
         biografia: Sequelize.DataTypes.TEXT,
         localizacao: Sequelize.DataTypes.STRING(45),
         website: Sequelize.DataTypes.STRING(45),
-        img_user: Sequelize.DataTypes.BLOB,
+        img_user: Sequelize.DataTypes.TEXT,
         usuarios_id: {
           type: Sequelize.DataTypes.INTEGER,
           references: {
