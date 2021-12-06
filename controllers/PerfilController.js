@@ -1,5 +1,5 @@
-const {Usuario, Perfil} = require('../database/models');
-
+const {sequelize, Perfil} = require('../database/models');
+const {Op,QueryTypes} = require('sequelize');
 module.exports = {
 	perfil: async (req, res)=>{
 		const id = req.session.usuario.id 
@@ -16,7 +16,7 @@ module.exports = {
 		
 		try
         {
-            let my_perfil = await Perfil.update({	nome: input_nome, 
+            let perfil = await Perfil.update({	nome: input_nome, 
 													biografia: biografia,
 													localizacao: localizacao, 
 													website: website, 
@@ -26,7 +26,7 @@ module.exports = {
 													where:{ usuarios_id: id }
 												})
 												.then(function(){
-													res.status(204).redirect('/feed')//.send("Perfil atualizado com sucesso!")
+													res.status(204).render('feed', {perfil})//.send("Perfil atualizado com sucesso!")
 												})
 												.catch(function(error){
 													res.send('Ocorreu um erro', error)
@@ -39,7 +39,11 @@ module.exports = {
 	},
 	exibirPerfil: async(req,res)=>{
 
-		
-		res.status(201).render('user-profile', {perfil:req.session.user,publicacao:req.session.userP})
+		const id = req.session.usuario.id 
+		const perfil = await Perfil.findOne({where:{usuarios_id:id}})
+		const publicacao = await sequelize.query("select pu.id, pu.texto, pu.img_pub from publicacoes pu where pu.usuarios_id = :USER", { replacements: {USER: id}, type: QueryTypes.SELECT });
+
+
+		res.status(201).render('user-profile', {perfil, publicacao})
 	}
 }

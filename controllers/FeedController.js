@@ -3,11 +3,10 @@ const {Op,QueryTypes} = require('sequelize');
 
 module.exports = {
     feed: async (req, res) => {
-        const public = await Publicacao.findAll({ where: { [Op.not]: { usuarios_id: req.session.usuario.id } } });
-        
-        const users = await sequelize.query("select * from publicacoes pu inner join perfis pe on pu.usuarios_id = pe.usuarios_id", { type: QueryTypes.SELECT });
-        console.log(users)
-
+       
+        const users = await sequelize.query("select pu.id, pu.img_pub, pu.texto, pu.usuarios_id, pe.nome, pu.data, pe.img_user from publicacoes pu inner join perfis pe on pu.usuarios_id = pe.usuarios_id where pu.usuarios_id in (select usuarios_S_id from amizades where usuarios_P_id = :USER) union all select pu.id, pu.img_pub, pu.texto,  pu.usuarios_id, pe.nome, pu.data, pe.img_user from publicacoes pu inner join perfis pe on pu.usuarios_id = pe.usuarios_id where  pu.usuarios_id = :USER order by data desc", 
+        { replacements: {USER: req.session.usuario.id},  type: QueryTypes.SELECT  });
+        console.log("entrou aki no feed")
 
 
         const perfil = await Perfil.findAll({ where: { [Op.not]: { usuarios_id: req.session.usuario.id } }});
@@ -49,7 +48,8 @@ module.exports = {
         console.log(req.body)
         console.log(id)
         
-        return res.status(201).render('/feed');
+        res.redirect("/feed");	
+       // return res.status(201).render('feed');
     }         
 //     post: async(req, res) => {
 //         const id = req.session.usuario.id

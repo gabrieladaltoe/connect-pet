@@ -22,27 +22,21 @@
 
                     </div>
 
-                </section>
-
-                <section class="btn-seguir--user-profile">
-                    <button class="btn btn-blue btn-seguir">
-                        <i class="fas fa-plus"></i>
-                        Seguir
-                    </button>
-                </section>
-
+                </section>              
+                <% if(publicacao.length > 0) { %>
+                    <% for(let pub of publicacao){%>
                 <section class="card-feed">
                     <div class="header-feed card-feed-header">
                         <div class="img-user">
-                            <img src="<%=perfil.img_user%> " alt="imagem-usuario">
+                            <img id="imgUser" src="<%=perfil.img_user%> " alt="image-feed">
                             <div class="card-feed--header-text">
                                 <a class="user-name-card">@<%=perfil.nome%> </a>
-                                <p class="text-feed"><%=publicacao.texto%></p>
+                                <p class="text-feed"><%=pub.texto%></p>
                             </div>
                         </div>
                     </div>
                     <div class="image-feed">
-                        <img id="feed-image" src="<%=publicacao.img_pub%>" alt="image-feed">
+                        <img id="imgId" src="images_pub/<%= pub.img_pub %>" alt="image-feed">
                     </div>
 
                     <div class="feed-comentarios">
@@ -57,6 +51,10 @@
 
 
                 </section>
+                <%}%>
+                <%} else { %>
+                    <div >Nenhuma publicacao encontrado</div>
+                <% } %>
 
 
             </div>

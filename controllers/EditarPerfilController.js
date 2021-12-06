@@ -15,7 +15,7 @@ module.exports = {
 			
 		} else {
 			console.log("entrou aki 4");
-			return res.redirect("/feed");
+			return res.redirect("/feed", {perfil});
 		}
 
 	
@@ -33,7 +33,7 @@ module.exports = {
 												 usuarios_id:req.session.usuario});
 
 												 												 
-            return res.redirect("/feed");
+            return res.render("feed", {resultado});
 
 
         }
