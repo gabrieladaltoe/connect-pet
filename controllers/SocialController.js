@@ -1,4 +1,4 @@
-const {Amizade,sequelize } = require('../database/models');
+const {Amizade,sequelize, Perfil } = require('../database/models');
 const {Op,QueryTypes} = require('sequelize');
 const SocialController = {
 		index: (req, res) => {
@@ -10,7 +10,7 @@ const SocialController = {
 		viewUsers : async (req,res) => {
 			const id = req.session.usuario.id;
 			let nome = req.query.buscaUsuario;
-
+			const perfil = await Perfil.findOne({ where: { usuarios_id: id } })
 			let query = "select P.id, P.nome, P.img_user, p.usuarios_id from perfis p where p.usuarios_id <> :USER and p.usuarios_id not in (SELECT usuarios_S_id FROM amizades where usuarios_P_id = :USER) " ;
 			console.log(nome);
 			if(nome)
@@ -20,7 +20,7 @@ const SocialController = {
             const amigosA = await sequelize.query(query, { replacements: {USER: id, 
 				                                                          NOME: nome}, type: QueryTypes.SELECT });	
 			
-			res.status(201).render('amigos', {amigosA:amigosA, nome});
+			res.status(201).render('amigos', {amigosA:amigosA, nome, perfil});
 			//res.render('mostarusuarios', {amigosA});
 		},
 		seguirAmigos: async (req, res) =>{

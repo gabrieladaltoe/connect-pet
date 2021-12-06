@@ -2,24 +2,24 @@ const {Usuario, Perfil, Amizade, sequelize} = require('../database/models');
 const {QueryTypes} = require('sequelize');
 module.exports = {
 	exibirAmigos: async (req, res)=>{
-        let nome = req.query.buscaUsuario;
-        const id = req.session.usuario.id;
-        let query = "select p.id, p.nome, p.img_user, p.usuarios_id from amizades a inner join perfis p on (a.usuarios_S_id = p.usuarios_id) where a.usuarios_P_id = :user " ;
-        if(nome)
-        {
-                query += " and P.NOME LIKE :NOME  group by a.usuarios_S_id ";
-        }
-        else
-        {
-                query += " group by a.usuarios_S_id"
-        }
-        const amigosA = await sequelize.query(query, { replacements: {user: id, NOME: nome}, type: QueryTypes.SELECT });
+                let nome = req.query.buscaUsuario;
+                const id = req.session.usuario.id;
 
+                const perfil = await Perfil.findOne({ where: { usuarios_id: id } })
+                
+                let query = "select p.id, p.nome, p.img_user, p.usuarios_id from amizades a inner join perfis p on (a.usuarios_S_id = p.usuarios_id) where a.usuarios_P_id = :user " ;
+                if(nome)
+                {
+                        query += " and P.NOME LIKE :NOME  group by a.usuarios_S_id ";
+                }
+                else
+                {
+                        query += " group by a.usuarios_S_id"
+                }
+                const amigosA = await sequelize.query(query, { replacements: {user: id, NOME: nome}, type: QueryTypes.SELECT });
 
-       
-               
-        res.status(201).render('mostarUsuarios', {amigosA:amigosA, nome});
-	},
+                res.status(201).render('mostarUsuarios', {amigosA:amigosA, nome, perfil});
+                },
 
         excluirAmigos:async (req, res)=>{
                 let id = req.params.id;

@@ -27,11 +27,12 @@ module.exports = {
         console.log(perfil)
         req.session.user = perfil
 
+     try{
         const publicacao= await Publicacao.findOne({ where: { usuarios_id: usuario.id } })
         let my_publicacao = publicacao.toJSON()
         console.log(publicacao)
         req.session.userP = publicacao
-
+     }catch{}
         return res.redirect("/feed");
     },
     logout: (req,res) =>
