@@ -510,6 +510,11 @@ aside .nav-lateral ul li a:hover {
 .lista-usuarios-item .btn-seguir {
   margin-left: auto;
   margin-right: 0;
+  color: #fff;
+}
+
+.lista-usuarios-item .btn-seguir:hover {
+  color: #fff;
 }
 
 .footer-menu li a{
