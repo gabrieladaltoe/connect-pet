@@ -1,35 +1,32 @@
-const {Usuario, Perfil, Amizade} = require('../database/models');
-
+const {Usuario, Perfil, Amizade, sequelize} = require('../database/models');
+const {QueryTypes} = require('sequelize');
 module.exports = {
 	exibirAmigos: async (req, res)=>{
-
-        // const amigos = await Usuario.findOne({
-        //         where: {id:req.session.usuario.id},
-        //         include:{
-        //         as:'amigos',
-        //         model: Amizade,
-        //         where: {usuarios_P_id:req.session.usuario.id}
-        
-        const amigosA = await Amizade.findAll({ where: {usuarios_P_id:req.session.usuario.id}});
-        console.log("amigosA")
-              console.log(amigosA)  
-  
-  
-        for (const amigo of amigosA) {
-                
-        const amigosP = await Perfil.findOne({ where: {usuarios_id:amigo.toJSON().usuarios_S_id}});
-        console.log("amigop")
-        console.log(amigosP) 
-        //amigo {z,z}
-        Object.assign(amigo,amigosP.toJSON())
-        
-                // amigosP.find(p => p.)
-                
+        let nome = req.query.buscaUsuario;
+        const id = req.session.usuario.id;
+        let query = "select p.id, p.nome, p.img_user, p.usuarios_id from amizades a inner join perfis p on (a.usuarios_S_id = p.usuarios_id) where a.usuarios_P_id = :user " ;
+        if(nome)
+        {
+                query += " and P.NOME LIKE :NOME  group by a.usuarios_S_id ";
         }
-        
-        console.log(amigosA)
-        // console.log(amigos.amigos[0].amizades)
-        
-        res.status(201).render('mostarUsuarios', {usuario:req.session.usuario,amigosA:amigosA, perfil:req.session.user});
+        else
+        {
+                query += " group by a.usuarios_S_id"
+        }
+        const amigosA = await sequelize.query(query, { replacements: {user: id, NOME: nome}, type: QueryTypes.SELECT });
+
+
+       
+               
+        res.status(201).render('mostarUsuarios', {amigosA:amigosA, nome});
 	},
+
+        excluirAmigos:async (req, res)=>{
+                let id = req.params.id;
+                let result = await Amizade.destroy({ where: { usuarios_P_id: req.session.usuario.id , usuarios_S_id: id} })
+		/*let resultado = await sequelize.query("Delete from amizades where usuarios_P_id = :usuarioP and usuarios_S_id = :usuarioS",
+                                                     { replacements: {usuarioP: req.session.usuario.id, usuarioS: id}, type: QueryTypes.SELECT });
+					*/
+		res.redirect("/amizades");	
+        }
 }

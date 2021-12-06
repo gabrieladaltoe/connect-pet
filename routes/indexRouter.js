@@ -11,5 +11,5 @@ router.get('/design-system', DesignSystemController.viewDesignSystem)
 router.get('/user-profile', SocialController.profile)
 router.get('/contato', SocialController.quemSomos)
 router.get('/usuarios', SocialController.viewUsers)
-
+router.get('/usuarios/:id/seguirAmigos', SocialController.seguirAmigos);
 module.exports = router
