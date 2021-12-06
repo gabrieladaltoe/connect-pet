@@ -7,6 +7,7 @@ const AmizadesController = require('../controllers/AmizadesController');
 
 
 router.get('/amizades', AmizadesController.exibirAmigos);
-
+router.get('/amizades', AmizadesController.exibirAmigos);
+router.get('/amizades/:id/excluirAmigos', AmizadesController.excluirAmigos);
 
 module.exports = router;
